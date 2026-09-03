@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chanel — AI Investment Portfolio Dashboard</title>
+
+<link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+<body>
+<div class="top-bar">
+  <div class="logo">CHANEL <span>/ AI Portfolio</span></div>
+  <nav class="nav"><button class="nav-btn" data-id="overview" onclick="showSection('overview')">Overview</button><button class="nav-btn" data-id="portfolio" onclick="showSection('portfolio')">Portfolio</button><button class="nav-btn" data-id="clusters" onclick="showSection('clusters')">Clusters</button><button class="nav-btn" data-id="economics" onclick="showSection('economics')">Economics</button><button class="nav-btn" data-id="roadmap" onclick="showSection('roadmap')">Roadmap</button><button class="nav-btn" data-id="heatmap" onclick="showSection('heatmap')">Heatmap</button><button class="nav-btn" data-id="agents" onclick="showSection('agents')">Agents</button><button class="nav-btn" data-id="risks" onclick="showSection('risks')">Risks</button><button class="nav-btn" data-id="recommendation" onclick="showSection('recommendation')">Recommendation</button></nav>
+</div>
+<div class="main">
+  <div class="section active" id="sec-overview">
+<div class="hero">
+  <div class="hero-badge">AI Investment Portfolio Dashboard</div>
+  <h1>Chanel<br><strong>Procedure Eater Analysis</strong></h1>
+  <div class="subtitle">Cross-SOP AI opportunity portfolio — clusters, economics, phased roadmap and canonical agents.</div>
+  <div class="hero-meta">
+    <span><span class="dot"></span>Generated: 2026-09-03</span>
+    <span><span class="dot"></span>4 SOPs analysed</span>
+    <span><span class="dot"></span>Economics: Benchmark-based</span>
+  </div>
+</div>
+<div class="kpi-strip">
+  <div class="kpi"><div class="kv">4</div><div class="kl">SOPs</div>
+    <div class="kb"><div class="kbf teal" style="width:100%"></div></div></div>
+  <div class="kpi"><div class="kv">28</div><div class="kl">Total Use Cases</div>
+    <div class="kb"><div class="kbf blue" style="width:100%"></div></div></div>
+  <div class="kpi"><div class="kv green">18</div><div class="kl">GO</div>
+    <div class="kb"><div class="kbf green" style="width:64.3%"></div></div></div>
+  <div class="kpi"><div class="kv">10</div><div class="kl">Conditional</div>
+    <div class="kb"><div class="kbf brand" style="width:35.7%"></div></div></div>
+  <div class="kpi"><div class="kv">$1.0M</div><div class="kl">Annual Savings</div>
+    <div class="kb"><div class="kbf green" style="width:100%"></div></div></div>
+  <div class="kpi"><div class="kv">8.4<span style="font-size:1rem;font-weight:400">mo</span></div>
+    <div class="kl">Payback (consol.)</div>
+    <div class="kb"><div class="kbf brand" style="width:80%"></div></div></div>
+  <div class="kpi"><div class="kv teal">8.2</div><div class="kl">FTE Freed</div>
+    <div class="kb"><div class="kbf teal" style="width:75%"></div></div></div>
+  <div class="kpi"><div class="kv">30%</div><div class="kl">Consolidation Saving</div>
+    <div class="kb"><div class="kbf green" style="width:30%"></div></div></div>
+</div>
+<div class="funnel-wrap">
+  <div class="section-eyebrow">Decision Funnel — 28 use cases analysed</div>
+  <div class="funnel-bar">
+    <div class="funnel-seg go" style="flex:18">18 GO</div>
+    <div class="funnel-seg cond" style="flex:10">10 COND</div>
+    <div class="funnel-seg nogo" style="flex:1">0 NO-GO</div>
+  </div>
+  <div class="funnel-legend">
+    <span><span class="fl-dot" style="background:var(--green)"></span>GO: 18 (64.3%)</span>
+    <span><span class="fl-dot" style="background:var(--warn)"></span>Conditional: 10 (35.7%)</span>
+    <span><span class="fl-dot" style="background:var(--err)"></span>No-Go: 0 (0.0%)</span>
+  </div>
+</div></div>
+  <div class="section" id="sec-portfolio">
+<div class="filter-bar" id="portfolio-filter">
+  <div class="search-box"><input type="text" id="uc-search" placeholder="Search use cases…" oninput="filterUC()"></div>
+  <div class="fchip-group">
+    <span class="fchip-lbl">Decision</span>
+    <button class="fchip active" onclick="filterUC()" data-dec="all">All</button>
+    <button class="fchip" onclick="filterUC()" data-dec="go">GO</button>
+    <button class="fchip" onclick="filterUC()" data-dec="cond">Conditional</button>
+    <button class="fchip" onclick="filterUC()" data-dec="nogo">No-Go</button>
+  </div>
+  <div class="fchip-group"><span class="fchip-lbl">SOP</span><button class="fchip" onclick="filterUC()" data-sop="mgmt-reporting-kpi-dashboards">mgmt-reporting-kpi-dashboards</button><button class="fchip" onclick="filterUC()" data-sop="anomaly-trend-detection">anomaly-trend-detection</button><button class="fchip" onclick="filterUC()" data-sop="predictive-forecasting">predictive-forecasting</button><button class="fchip" onclick="filterUC()" data-sop="variance-analysis-commentary">variance-analysis-commentary</button></div>
+  <span class="fcount" id="uc-count">28 use cases</span>
+</div>
+<div class="sec-pad" style="padding-top:1.25rem">
+  <div class="uc-list" id="uc-list"><div class="uc-card go" data-dec="go" data-sop="mgmt-reporting-kpi-dashboards"
+        data-phase="1" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#1</span>
+        <span class="uc-name" title="When data is loaded for a reporting period, automatically run completeness checks (all expected entities/markets/boutiques/cost centers/active accounts present; no unexpected blanks/zeros; valid currency codes) and log exceptions.">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-sop">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-score">74</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$10K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">31.0mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$25K</span></span>
+        <span class="m"><span>duration</span><span class="v">3w</span></span>
+        <span class="chip low" style="margin-left:.25rem">Low</span>
+        
+        <span class="chip phase1">Phase 1</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When data is loaded for a reporting period, automatically run completeness checks (all expected entities/markets/boutiques/cost centers/active accounts present; no unexpected blanks/zeros; valid currency codes) and log exceptions.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 74 &gt;=60, technical_feasibility 62 &gt;=50; cheap low-code quick win that de-risks the whole cycle. Not agentic (RPA).</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Master data not current -&gt; false exceptions</li><li>New markets/boutiques not registered</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Current master data</li><li>Power Platform governance</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="anomaly-trend-detection"
+        data-phase="1" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#2</span>
+        <span class="uc-name" title="When data is refreshed pre-detection, run data-quality validation (reconcile to management reporting, missing/duplicate/mapping checks, currency/calendar alignment, red-flag detection) and mark reports preliminary until issues resolved.">anomaly-trend-detection</span>
+        <span class="uc-sop">anomaly-trend-detection</span>
+        <span class="uc-score">73</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$15K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">20.0mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$25K</span></span>
+        <span class="m"><span>duration</span><span class="v">3w</span></span>
+        <span class="chip low" style="margin-left:.25rem">Low</span>
+        
+        <span class="chip phase1">Phase 1</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When data is refreshed pre-detection, run data-quality validation (reconcile to management reporting, missing/duplicate/mapping checks, currency/calendar alignment, red-flag detection) and mark reports preliminary until issues resolved.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 73 &gt;=60, feasibility 62 &gt;=50; positive 3yr benefit; cheap low-code quick win shared across FP&amp;A SOPs. Not agentic (RPA).</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Reconciliation source unavailable</li><li>New master data causes false flags</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Management-reporting totals</li><li>Shared gate reuse</li><li>Master data sync</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="predictive-forecasting"
+        data-phase="1" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#3</span>
+        <span class="uc-name" title="Run forecast data-quality checks (completeness/reconciliation/outlier/currency/calendar/hierarchy) against defined thresholds and block forecast generation until critical thresholds are met.">predictive-forecasting</span>
+        <span class="uc-sop">predictive-forecasting</span>
+        <span class="uc-score">73</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$10K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">30.1mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$25K</span></span>
+        <span class="m"><span>duration</span><span class="v">3w</span></span>
+        <span class="chip low" style="margin-left:.25rem">Low</span>
+        
+        <span class="chip phase1">Phase 1</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">Run forecast data-quality checks (completeness/reconciliation/outlier/currency/calendar/hierarchy) against defined thresholds and block forecast generation until critical thresholds are met.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 73 &gt;=60, feasibility 60 &gt;=50; cheap low-code quick win that de-risks forecasting. Not agentic (RPA).</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Quality metrics unavailable/stale in Fabric</li><li>Thresholds miscalibrated block/allow wrongly</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Fabric quality metrics</li><li>Governed thresholds</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="variance-analysis-commentary"
+        data-phase="1" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#4</span>
+        <span class="uc-name" title="When a validated variance dataset is ready, identify top favorable/unfavorable material variances against thresholds and generate first-draft fact-grounded commentary per P&amp;L line, driver-attributed only from the data, with follow-up questions.">variance-analysis-commentary</span>
+        <span class="uc-sop">variance-analysis-commentary</span>
+        <span class="uc-score">73</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$175K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">4.9mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$72K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase1">Phase 1</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a validated variance dataset is ready, identify top favorable/unfavorable material variances against thresholds and generate first-draft fact-grounded commentary per P&amp;L line, driver-attributed only from the data, with follow-up questions.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 73 &gt;=60, feasibility 58 &gt;=50; the single highest-value quick win across all four SOPs (4.9-month payback). This is the canonical FP&amp;A commentary capability.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Hallucinated / unsupported driver in commentary</li><li>Confidential data sent to unapproved AI tool</li><li>Overreliance / analysts accept drafts uncritically</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Reconciled dataset gate</li><li>Approved prompt library</li><li>Responsible AI approval</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="anomaly-trend-detection"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#5</span>
+        <span class="uc-name" title="When a period's data is refreshed, run multi-technique anomaly detection (rules, statistical, ML-assisted) across financial and operational metrics, classify by dimension/severity/impact, assign a preliminary reason code, and publish prioritized alerts.">anomaly-trend-detection</span>
+        <span class="uc-sop">anomaly-trend-detection</span>
+        <span class="uc-score">72</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$62K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">23.4mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$120K</span></span>
+        <span class="m"><span>duration</span><span class="v">16w</span></span>
+        <span class="chip high" style="margin-left:.25rem">High</span>
+        <span class="chip neutral">Monitor</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a period's data is refreshed, run multi-technique anomaly detection (rules, statistical, ML-assisted) across financial and operational metrics, classify by dimension/severity/impact, assign a preliminary reason code, and publish prioritized alerts.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 72 &gt;=60, feasibility 55 &gt;=50; core capability of the anomaly platform with positive 3yr benefit. Highest-value in this SOP.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>High false-positive rate causes alert fatigue</li><li>Data quality issues generate false anomalies</li><li>ML opacity reduces trust</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Data quality gate</li><li>Calibrated thresholds</li><li>Explainable reason codes</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="variance-analysis-commentary"
+        data-phase="1" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#6</span>
+        <span class="uc-name" title="When source data is extracted, validate and reconcile it to the official close (completeness, accuracy to management P&amp;L, EPM version match, mapping, duplicates, currency/sign) before AI generation, blocking on failure.">variance-analysis-commentary</span>
+        <span class="uc-sop">variance-analysis-commentary</span>
+        <span class="uc-score">72</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$10K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">30.4mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$25K</span></span>
+        <span class="m"><span>duration</span><span class="v">3w</span></span>
+        <span class="chip low" style="margin-left:.25rem">Low</span>
+        
+        <span class="chip phase1">Phase 1</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When source data is extracted, validate and reconcile it to the official close (completeness, accuracy to management P&amp;L, EPM version match, mapping, duplicates, currency/sign) before AI generation, blocking on failure.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 72 &gt;=60, feasibility 60 &gt;=50; cheap low-code quick win and the mandatory gate before AI generation. Not agentic (RPA). Deliver via the shared FP&amp;A reconciliation gate.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>EPM version mismatch not detected</li><li>Golden-source unavailable</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Golden-source access</li><li>Shared gate reuse</li><li>Version locking</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="mgmt-reporting-kpi-dashboards"
+        data-phase="1" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#7</span>
+        <span class="uc-name" title="When variance analysis is required, automatically identify material movements versus budget/forecast/prior year against thresholds and draft first-pass variance commentary linked to business drivers for analyst refinement.">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-sop">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-score">71</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$146K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">5.8mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$70K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase1">Phase 1</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When variance analysis is required, automatically identify material movements versus budget/forecast/prior year against thresholds and draft first-pass variance commentary linked to business drivers for analyst refinement.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 71 &gt;=60 and technical_feasibility 55 &gt;=50; no regulatory prohibition (draft-only, human-validated). Highest-value quick win in this SOP.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>LLM fabricates a variance driver not supported by data</li><li>Data quality issues in Fabric products degrade commentary</li><li>Change management: analysts distrust AI drafts</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Certified Fabric Core Data Products</li><li>Current KPI dictionary</li><li>Responsible AI approval</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="variance-analysis-commentary"
+        data-phase="1" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#8</span>
+        <span class="uc-name" title="When material variances are identified, classify each into the standard driver taxonomy (volume/price/mix/FX/timing/one-off/accounting/headcount/inventory/etc.) with a confidence level, using only evidence in the data.">variance-analysis-commentary</span>
+        <span class="uc-sop">variance-analysis-commentary</span>
+        <span class="uc-score">71</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$49K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">7.4mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$30K</span></span>
+        <span class="m"><span>duration</span><span class="v">5w</span></span>
+        <span class="chip low" style="margin-left:.25rem">Low</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase1">Phase 1</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When material variances are identified, classify each into the standard driver taxonomy (volume/price/mix/FX/timing/one-off/accounting/headcount/inventory/etc.) with a confidence level, using only evidence in the data.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 71 &gt;=60, feasibility 60 &gt;=50; strong 7.4-month payback as a module on the commentary agent. Delivers the driver-attribution backbone.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Misclassification of ambiguous drivers</li><li>Taxonomy drift across markets</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>UC-01 dataset</li><li>Central taxonomy</li><li>Validation discipline</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="predictive-forecasting"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#9</span>
+        <span class="uc-name" title="Generate the baseline predictive forecast (revenue/margin/OPEX/operating result) by region/market/channel/category using approved time-series and driver-based models with confidence indicators.">predictive-forecasting</span>
+        <span class="uc-sop">predictive-forecasting</span>
+        <span class="uc-score">70</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$103K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">15.1mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$130K</span></span>
+        <span class="m"><span>duration</span><span class="v">16w</span></span>
+        <span class="chip high" style="margin-left:.25rem">High</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">Generate the baseline predictive forecast (revenue/margin/OPEX/operating result) by region/market/channel/category using approved time-series and driver-based models with confidence indicators.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 70 &gt;=60, technical_feasibility 58 &gt;=50; core FP&amp;A transformation capability. Payback ~15mo.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Model drift/overfitting degrades forecasts</li><li>Data quality below thresholds</li><li>Change management: distrust of ML baseline</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Data quality gate</li><li>Validated models in inventory</li><li>Responsible AI approval</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="anomaly-trend-detection"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#10</span>
+        <span class="uc-name" title="When a material anomaly is triaged, perform first-pass root cause analysis by decomposing variance into drivers and drilling down by region/market/boutique/channel/category, proposing a root-cause hypothesis with reason code and confidence.">anomaly-trend-detection</span>
+        <span class="uc-sop">anomaly-trend-detection</span>
+        <span class="uc-score">69</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$142K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">8.1mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$95K</span></span>
+        <span class="m"><span>duration</span><span class="v">14w</span></span>
+        <span class="chip high" style="margin-left:.25rem">High</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a material anomaly is triaged, perform first-pass root cause analysis by decomposing variance into drivers and drilling down by region/market/boutique/channel/category, proposing a root-cause hypothesis with reason code and confidence.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 69 &gt;=60, feasibility 55 &gt;=50; strongest quick-win economics in this SOP (8-month payback). Depends on UC-01 alerts.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Incorrect root-cause hypothesis mislabels driver</li><li>Missing events-calendar data weakens attribution</li><li>Data quality upstream</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>UC-01 detection</li><li>Reason-code taxonomy</li><li>Events calendar</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="mgmt-reporting-kpi-dashboards"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#11</span>
+        <span class="uc-name" title="When actuals close and source data is extracted, automatically reconcile management-reporting totals to the GL/consolidation source by entity/account group/division/currency/period and flag unreconciled differences for analyst review.">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-sop">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-score">68</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$67K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">12.9mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$72K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Validator</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When actuals close and source data is extracted, automatically reconcile management-reporting totals to the GL/consolidation source by entity/account group/division/currency/period and flag unreconciled differences for analyst review.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 68 &gt;=60 and technical_feasibility 55 &gt;=50; no prohibition (agent flags, accounting confirms).</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Mapping drift between source and management model causes false mismatches</li><li>Legacy AX V6 data during transition not API-accessible</li><li>Data quality gaps propagate</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Certified mappings</li><li>Accounting sign-off workflow</li><li>HERO/D365 stabilization</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="predictive-forecasting"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#12</span>
+        <span class="uc-name" title="After close, compute forecast accuracy metrics (MAPE/WAPE/bias/RMSE/FVA/hit rate), classify major misses by cause, and assess whether management adjustments improved accuracy.">predictive-forecasting</span>
+        <span class="uc-sop">predictive-forecasting</span>
+        <span class="uc-score">68</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$14K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">38.7mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$45K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">After close, compute forecast accuracy metrics (MAPE/WAPE/bias/RMSE/FVA/hit rate), classify major misses by cause, and assess whether management adjustments improved accuracy.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 68 and feasibility 66 meet GO thresholds, but standalone ROI ~breakeven/negative. Deliver bundled with the Biarritz forecasting MLOps stack (shared with UC-01/UC-07) so it becomes the accuracy-feedback feature of the platform.</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Standalone ROI marginal; strongest as a platform feature</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Data quality/version mismatch skews metrics</li><li>Change management: accuracy transparency resistance</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Version history</li><li>MLOps platform</li><li>No-blame culture</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="variance-analysis-commentary"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#13</span>
+        <span class="uc-name" title="When AI-drafted commentary is produced, review it for numerical accuracy and consistency (figures vs dataset, comparator, signs, percentages, ranking, aggregation) and flag discrepancies before human review.">variance-analysis-commentary</span>
+        <span class="uc-sop">variance-analysis-commentary</span>
+        <span class="uc-score">68</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$35K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">11.0mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$32K</span></span>
+        <span class="m"><span>duration</span><span class="v">5w</span></span>
+        <span class="chip low" style="margin-left:.25rem">Low</span>
+        <span class="chip neutral">Validator</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When AI-drafted commentary is produced, review it for numerical accuracy and consistency (figures vs dataset, comparator, signs, percentages, ranking, aggregation) and flag discrepancies before human review.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 68 &gt;=60, feasibility 60 &gt;=50; positive ROI and it is the safety control that makes UC-01 trustworthy. Deliver bundled with the commentary agent.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Validator misses a subtle aggregation error</li><li>False flags create rework</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Dataset cross-check</li><li>Rounding-rule alignment</li><li>Bundling with UC-01</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="mgmt-reporting-kpi-dashboards"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#14</span>
+        <span class="uc-name" title="When dashboards are refreshed, automatically validate that KPI cards/visuals reconcile to the approved management report, filters/drill-downs operate, and restricted data is not exposed, marking the dashboard draft until validation passes.">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-sop">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-score">67</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$11K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">43.6mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$40K</span></span>
+        <span class="m"><span>duration</span><span class="v">6w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Monitor</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When dashboards are refreshed, automatically validate that KPI cards/visuals reconcile to the approved management report, filters/drill-downs operate, and restricted data is not exposed, marking the dashboard draft until validation passes.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 67 and technical_feasibility 62 meet GO thresholds, BUT standalone 3yr net benefit is negative; value is risk-based not hours-based. Recommend delivering as a bundled Monitor feature of the reporting platform rather than a standalone build.</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Negative standalone financial ROI</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>False-negative on access exposure</li><li>Fabric API changes break checks</li><li>Data quality causes false recon failures</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Bundling with platform</li><li>Access directory integration</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="variance-analysis-commentary"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#15</span>
+        <span class="uc-name" title="When commentary is refined, rewrite drafts to improve clarity/precision/executive readability while preserving all numbers exactly and enforcing Chanel's discreet luxury tone and banned-phrase list.">variance-analysis-commentary</span>
+        <span class="uc-sop">variance-analysis-commentary</span>
+        <span class="uc-score">67</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$34K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">9.1mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$26K</span></span>
+        <span class="m"><span>duration</span><span class="v">4w</span></span>
+        <span class="chip low" style="margin-left:.25rem">Low</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When commentary is refined, rewrite drafts to improve clarity/precision/executive readability while preserving all numbers exactly and enforcing Chanel's discreet luxury tone and banned-phrase list.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 67 &gt;=60, feasibility 60 &gt;=50; strong 9-month payback as a module on the commentary agent.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Rewrite alters a number</li><li>Tone drifts to promotional</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Number preservation</li><li>Style guide</li><li>Bundling with UC-01</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="anomaly-trend-detection"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#16</span>
+        <span class="uc-name" title="When alerts are generated, prioritize and triage — deduplicate, group by common driver, rank by impact/visibility/forecast/control risk, assign owners and SLA-based due dates.">anomaly-trend-detection</span>
+        <span class="uc-sop">anomaly-trend-detection</span>
+        <span class="uc-score">66</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$27K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">21.3mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$48K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Router</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When alerts are generated, prioritize and triage — deduplicate, group by common driver, rank by impact/visibility/forecast/control risk, assign owners and SLA-based due dates.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 66 &gt;=60, feasibility 60 &gt;=50; positive 3yr benefit; enables the RCA agent to focus on material items.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Over-aggressive dedup hides distinct issues</li><li>Mis-prioritization delays critical items</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>UC-01 alerts</li><li>Owner/SLA mapping</li><li>ServiceNow workflow</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="predictive-forecasting"
+        data-phase="4" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#17</span>
+        <span class="uc-name" title="Consolidate regional/BU forecasts globally — validating currency translation, intercompany eliminations, hierarchy mapping, adjustment approvals — and prepare variance bridges vs budget/prior forecast/prior year.">predictive-forecasting</span>
+        <span class="uc-sop">predictive-forecasting</span>
+        <span class="uc-score">66</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$19K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">58.5mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$95K</span></span>
+        <span class="m"><span>duration</span><span class="v">14w</span></span>
+        <span class="chip high" style="margin-left:.25rem">High</span>
+        <span class="chip neutral">Orchestrator</span>
+        
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">Consolidate regional/BU forecasts globally — validating currency translation, intercompany eliminations, hierarchy mapping, adjustment approvals — and prepare variance bridges vs budget/prior forecast/prior year.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 66 meets threshold but standalone ROI negative and eliminations logic is complex; consolidation is heavily governed. Deliver leveraging the shared consolidation/reconciliation platform service (canonical reconciliation capability) rather than a bespoke build.</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Standalone economics negative; complex eliminations encoding</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Intercompany elimination errors</li><li>Unapproved adjustments consolidated</li><li>Hierarchy drift</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Shared reconciliation platform</li><li>Approved-version locking</li><li>Certified hierarchies</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="variance-analysis-commentary"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#18</span>
+        <span class="uc-name" title="When commentary drafts are produced, run a quality-review pass identifying unsupported driver claims, missing material variances, ambiguous wording, incorrect favorable/unfavorable interpretation and excessive speculation, returning a revised version and follow-up questions.">variance-analysis-commentary</span>
+        <span class="uc-sop">variance-analysis-commentary</span>
+        <span class="uc-score">65</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$38K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">9.6mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$30K</span></span>
+        <span class="m"><span>duration</span><span class="v">5w</span></span>
+        <span class="chip low" style="margin-left:.25rem">Low</span>
+        <span class="chip neutral">Validator</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When commentary drafts are produced, run a quality-review pass identifying unsupported driver claims, missing material variances, ambiguous wording, incorrect favorable/unfavorable interpretation and excessive speculation, returning a revised version and follow-up questions.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 65 &gt;=60, feasibility 58 &gt;=50; strong ~10-month payback; the qualitative complement to UC-02 that makes commentary trustworthy. Deliver bundled with the commentary agent.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Reviewer misses a subtle unsupported claim</li><li>Over-flagging creates fatigue</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Dataset cross-check</li><li>Combination with UC-02</li><li>Bundling with UC-01</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="mgmt-reporting-kpi-dashboards"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#19</span>
+        <span class="uc-name" title="When the executive pack is drafted, automatically synthesize top-three performance messages, key financial impacts, risks/opportunities and decisions-required into an executive summary from validated variance and KPI data.">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-sop">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-score">64</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$23K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">23.5mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$45K</span></span>
+        <span class="m"><span>duration</span><span class="v">6w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When the executive pack is drafted, automatically synthesize top-three performance messages, key financial impacts, risks/opportunities and decisions-required into an executive summary from validated variance and KPI data.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 64 &gt;=60, technical_feasibility 65 &gt;=50; low-cost extension of UC-02 platform service.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Over-generic or promotional tone unsuitable for luxury/executive context</li><li>Confidential detail exposed to broader audience</li><li>Data quality upstream</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>UC-02 in place</li><li>Executive tone style guide</li><li>Review discipline</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="anomaly-trend-detection"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#20</span>
+        <span class="uc-name" title="When emerging trends develop, detect sustained directional movements (rolling 3/6/12-month, seasonality-adjusted, trend-break, correlation) that may not breach single-period thresholds but indicate risk/opportunity, and surface them to FP&amp;A.">anomaly-trend-detection</span>
+        <span class="uc-sop">anomaly-trend-detection</span>
+        <span class="uc-score">63</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$32K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">20.4mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$55K</span></span>
+        <span class="m"><span>duration</span><span class="v">10w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Monitor</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When emerging trends develop, detect sustained directional movements (rolling 3/6/12-month, seasonality-adjusted, trend-break, correlation) that may not breach single-period thresholds but indicate risk/opportunity, and surface them to FP&amp;A.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 63 &gt;=60, feasibility 58 &gt;=50; positive 3yr benefit as a module on the UC-01 platform.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Trend false positives from noise</li><li>Insufficient history for new series</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>UC-01 platform</li><li>Seasonality models</li><li>Minimum-duration thresholds</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="predictive-forecasting"
+        data-phase="4" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#21</span>
+        <span class="uc-name" title="Build base/upside/downside scenarios by applying luxury-specific variables (tourism, FX, scarcity, pricing, campaigns) and quantify P&amp;L/cash/inventory impacts.">predictive-forecasting</span>
+        <span class="uc-sop">predictive-forecasting</span>
+        <span class="uc-score">63</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$19K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">48.3mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$75K</span></span>
+        <span class="m"><span>duration</span><span class="v">12w</span></span>
+        <span class="chip high" style="margin-left:.25rem">High</span>
+        <span class="chip neutral">Analyzer</span>
+        
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">Build base/upside/downside scenarios by applying luxury-specific variables (tourism, FX, scarcity, pricing, campaigns) and quantify P&amp;L/cash/inventory impacts.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 63 meets threshold but standalone ROI negative and quantification is judgment-heavy. Deliver as an extension of the baseline-forecast Biarritz platform (shared engine) rather than a funded standalone build.</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Standalone economics negative; depends on UC-01 baseline platform</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Over-precise scenarios create false confidence</li><li>Data quality on external variables</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>UC-01 platform</li><li>Approved variable library</li><li>Governance validation</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="predictive-forecasting"
+        data-phase="4" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#22</span>
+        <span class="uc-name" title="When a management adjustment is proposed, validate documentation completeness and check against prohibited-adjustment rules, routing complete requests for approval and returning incomplete ones.">predictive-forecasting</span>
+        <span class="uc-sop">predictive-forecasting</span>
+        <span class="uc-score">62</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$11K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">47.5mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$42K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Validator</span>
+        
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a management adjustment is proposed, validate documentation completeness and check against prohibited-adjustment rules, routing complete requests for approval and returning incomplete ones.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 62 meets threshold but standalone ROI negative; strong governance/bias-control value. Deliver on the shared adjustment/compliance workflow (canonical Validator pattern shared with variance/anomaly validators).</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Standalone economics negative</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Agent misjudges evidence sufficiency</li><li>Users game rationale text</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Structured adjustment templates</li><li>Committee oversight</li><li>Shared workflow</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="mgmt-reporting-kpi-dashboards"
+        data-phase="4" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#23</span>
+        <span class="uc-name" title="When the reporting cycle runs, orchestrate the WD1-WD10 workflow — triggering extraction, validation, review, approval and publication tasks with SLA tracking and escalation on slippage.">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-sop">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-score">61</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$5K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">111.0mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$42K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Orchestrator</span>
+        
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When the reporting cycle runs, orchestrate the WD1-WD10 workflow — triggering extraction, validation, review, approval and publication tasks with SLA tracking and escalation on slippage.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 61 but standalone ROI strongly negative and value largely double-counts cycle-time gains attributed to UC-01/UC-02. Deliver as a light ServiceNow/Power Automate orchestration layer bundled with the platform, not a funded standalone agent.</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Standalone economics negative; benefit overlaps UC-01/UC-02 cycle-time gains</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Over-automation reduces human judgment on cycle exceptions</li><li>ServiceNow Finance capability not enabled</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>ServiceNow Finance enablement</li><li>Bundled delivery</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="anomaly-trend-detection"
+        data-phase="4" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#24</span>
+        <span class="uc-name" title="When material anomalies require escalation, generate the executive anomaly summary and route escalations to the correct level (FP&amp;A Manager -&gt; Regional Director -&gt; Regional/Division CFO -&gt; Global) with SLA tracking and standard format.">anomaly-trend-detection</span>
+        <span class="uc-sop">anomaly-trend-detection</span>
+        <span class="uc-score">60</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$10K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">51.9mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$45K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Orchestrator</span>
+        
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When material anomalies require escalation, generate the executive anomaly summary and route escalations to the correct level (FP&amp;A Manager -&gt; Regional Director -&gt; Regional/Division CFO -&gt; Global) with SLA tracking and standard format.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 60 at threshold but standalone ROI negative. Deliver as an escalation/summary feature bundled onto the shared ServiceNow workflow + executive-summary synthesizer (canonical Orchestrator + summarizer reused from reporting SOP).</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Standalone economics negative</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Mis-routed escalation to wrong level</li><li>Confidential summary over-shared</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Escalation matrix</li><li>Shared summarizer</li><li>Access controls</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="predictive-forecasting"
+        data-phase="4" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#25</span>
+        <span class="uc-name" title="Continuously monitor forecasting model performance for accuracy deterioration, bias and data drift, alerting analytics when recalibration thresholds are breached.">predictive-forecasting</span>
+        <span class="uc-sop">predictive-forecasting</span>
+        <span class="uc-score">60</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$9K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">65.1mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$48K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Monitor</span>
+        
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">Continuously monitor forecasting model performance for accuracy deterioration, bias and data drift, alerting analytics when recalibration thresholds are breached.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 60 at threshold but standalone ROI negative; it is a mandatory Responsible AI monitoring obligation for UC-01. Deliver as the MLOps monitoring layer bundled with the forecasting platform, not a standalone build.</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Standalone economics negative; dependent on UC-01 production models</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Alert fatigue from over-sensitive drift thresholds</li><li>Undetected structural business change</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>UC-01 in production</li><li>Calibrated thresholds</li><li>Analytics ownership</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="variance-analysis-commentary"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#26</span>
+        <span class="uc-name" title="When commentary is drafted, identify which variances may affect the full-year outlook, separating timing from recurring run-rate impacts, and prepare a forecast-implication table with required actions and owners.">variance-analysis-commentary</span>
+        <span class="uc-sop">variance-analysis-commentary</span>
+        <span class="uc-score">60</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$28K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">17.3mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$40K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When commentary is drafted, identify which variances may affect the full-year outlook, separating timing from recurring run-rate impacts, and prepare a forecast-implication table with required actions and owners.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 60 &gt;=60, feasibility 58 &gt;=50; positive 3yr benefit; bridges the commentary and forecasting platforms. Deliver as a module on the commentary agent.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Over-attributing timing vs recurring</li><li>Forecast assumptions stale</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>UC-01 commentary</li><li>CRAFT integration</li><li>Forecast-process linkage</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="anomaly-trend-detection"
+        data-phase="4" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#27</span>
+        <span class="uc-name" title="When anomaly models run in production, continuously monitor detection-model effectiveness (false positive rate, missed anomalies, alert volume, drift, threshold relevance) and recommend threshold recalibration to the quarterly review.">anomaly-trend-detection</span>
+        <span class="uc-sop">anomaly-trend-detection</span>
+        <span class="uc-score">59</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$9K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">63.4mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$46K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Monitor</span>
+        
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When anomaly models run in production, continuously monitor detection-model effectiveness (false positive rate, missed anomalies, alert volume, drift, threshold relevance) and recommend threshold recalibration to the quarterly review.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 59 (40-59 band) and standalone ROI negative; it is a Responsible AI monitoring prerequisite for UC-01. Deliver as the MLOps monitoring layer bundled with the anomaly platform (shared with forecasting model monitoring).</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Standalone economics negative; depends on UC-01 production models</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>No outcome labels -&gt; can't measure FP rate</li><li>Missed anomalies undetected</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>UC-01 production</li><li>Outcome labeling</li><li>Shared MLOps</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="mgmt-reporting-kpi-dashboards"
+        data-phase="4" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#28</span>
+        <span class="uc-name" title="When a KPI change request or master-data hierarchy change is submitted, automatically assess reporting impact, validate the new formula against the KPI dictionary, and route to the KPI Governance Committee with a compliance checklist.">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-sop">mgmt-reporting-kpi-dashboards</span>
+        <span class="uc-score">55</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$15K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">43.3mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$55K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Router</span>
+        
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a KPI change request or master-data hierarchy change is submitted, automatically assess reporting impact, validate the new formula against the KPI dictionary, and route to the KPI Governance Committee with a compliance checklist.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 55 in 40-59 band AND blocking dependency (KPI-report dependency catalog does not yet exist) AND negative standalone ROI. Value is governance, not hours.</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">No machine-readable KPI-to-report/dashboard dependency catalog exists to power impact analysis</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Incomplete dependency catalog misses impacted reports</li><li>Change management around governance workflow adoption</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Dependency catalog</li><li>Committee workflow adoption</li></ul></div>
+      </div></div>
+    </div></div>
+</div></div>
+  <div class="section" id="sec-clusters"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Cross-SOP Clusters</div>
+      <h2 class="sec-h">Portfolio <strong>Clusters</strong></h2>
+      <p class="sec-sub">Use cases grouped across SOPs by category — identifying shared platform service opportunities.</p>
+    </div>
+    <div class="cluster-grid">
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C10</span>
+        <span class="cluster-name" title="Knowledge Synthesis">Knowledge Synthesis</span>
+        <span class="chip medium">Medium</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">4</span>Use Cases</div>
+        <div><span class="csv">2</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Aggregating validated financial data into narrative commentary and executive summaries — the dominant, cross-cutting FP&amp;A pattern.</div>
+      <div class="cluster-sops"><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span><span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></div>
+      <div class="cluster-value">⬆ ~$110k/yr potential consolidation savings (30% efficiency by building one commentary engine instead of duplicating across the reporting and commentary SOPs).</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C06</span>
+        <span class="cluster-name" title="Monitoring &amp; Alerting">Monitoring &amp; Alerting</span>
+        <span class="chip high">High</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">3</span>Use Cases</div>
+        <div><span class="csv">2</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Continuous/event-triggered watching of metrics, data-quality thresholds and model health — anomaly detection, trend detection, forecast data-quality and model monitoring.</div>
+      <div class="cluster-sops"><span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span><span class="sop-tag">FP&amp;A Predictive Forecasting Process</span></div>
+      <div class="cluster-value">⬆ ~$32k/yr consolidation savings by sharing the detection/monitoring engine and MLOps stack across anomaly and forecasting.</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C08</span>
+        <span class="cluster-name" title="Exception Management">Exception Management</span>
+        <span class="chip high">High</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">2</span>Use Cases</div>
+        <div><span class="csv">2</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Detecting, decomposing and resolving anomalies/quality defects — root-cause analysis and commentary quality review.</div>
+      <div class="cluster-sops"><span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span><span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></div>
+      <div class="cluster-value">⬆ ~$59k/yr consolidation savings by reusing driver-decomposition and reason-code logic.</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C03</span>
+        <span class="cluster-name" title="Decision Intelligence">Decision Intelligence</span>
+        <span class="chip high">High</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">2</span>Use Cases</div>
+        <div><span class="csv">2</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">AI recommendations supporting human decisions — baseline forecasting and variance-driver classification.</div>
+      <div class="cluster-sops"><span class="sop-tag">FP&amp;A Predictive Forecasting Process</span><span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></div>
+      <div class="cluster-value">⬆ ~$48k/yr consolidation savings via shared Biarritz model-serving and confidence framework.</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C04</span>
+        <span class="cluster-name" title="Data Entry Automation">Data Entry Automation</span>
+        <span class="chip low">Low</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">2</span>Use Cases</div>
+        <div><span class="csv">2</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Deterministic completeness/quality validation of loaded structured data — the low-code foundation across SOPs.</div>
+      <div class="cluster-sops"><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span><span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span></div>
+      <div class="cluster-value">⬆ ~$15k/yr consolidation savings by building one low-code data-quality gate reused portfolio-wide.</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C09</span>
+        <span class="cluster-name" title="Reconciliation &amp; Verification">Reconciliation &amp; Verification</span>
+        <span class="chip medium">Medium</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">1</span>Use Cases</div>
+        <div><span class="csv">1</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Matching management-reporting/commentary data to the GL/consolidation/EPM golden source before use.</div>
+      <div class="cluster-sops"><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span></div>
+      <div class="cluster-value">⬆ ~$20k/yr consolidation savings by making reconciliation a shared platform service consumed by 3 SOPs.</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C02</span>
+        <span class="cluster-name" title="Case Orchestration">Case Orchestration</span>
+        <span class="chip medium">Medium</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">1</span>Use Cases</div>
+        <div><span class="csv">1</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Managing the alert/case lifecycle — dedup, grouping, prioritization, owner assignment and SLA routing.</div>
+      <div class="cluster-sops"><span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span></div>
+      <div class="cluster-value">⬆ ~$8k/yr consolidation savings via a shared ServiceNow orchestration/routing layer.</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C07</span>
+        <span class="cluster-name" title="Document Processing">Document Processing</span>
+        <span class="chip low">Low</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">1</span>Use Cases</div>
+        <div><span class="csv">1</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Transforming/refining unstructured commentary text with number preservation and luxury-tone enforcement.</div>
+      <div class="cluster-sops"><span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></div>
+      <div class="cluster-value">⬆ ~$10k/yr consolidation savings by sharing one tone/rewrite service across narrative-producing SOPs.</div>
+    </div></div>
+    
+    <h3 style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.75rem;font-weight:700;text-transform:uppercase;
+        letter-spacing:.08em;color:var(--tpl);margin:2rem 0 .75rem;display:flex;align-items:center;gap:.5rem">
+      <span style="width:3px;height:10px;background:var(--purple);display:inline-block;border-radius:1px"></span>
+      Platform Services</h3>
+    <div style="overflow-x:auto">
+    <table class="svcs-table">
+      <thead><tr>
+        <th>ID</th><th>Service</th><th>Responsibility</th><th>SOPs</th>
+        <th>Consol. Savings</th><th>Priority</th><th>Phase</th>
+      </tr></thead>
+      <tbody>
+    <tr>
+      <td><span class="svc-id">S01</span></td>
+      <td style="color:var(--tp);font-weight:600">FP&amp;A Narrative &amp; Synthesis Service (Knowledge Synthesis)</td>
+      <td>Single LLM commentary/synthesis engine drafting variance commentary and executive summaries from validated data with materiality thresholds and luxury tone.</td>
+      <td><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span> <span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$56K</td>
+      <td><span class="pri-badge high">High</span></td>
+      <td><span class="chip phase1">Phase 1</span></td>
+    </tr>
+    <tr>
+      <td><span class="svc-id">S02</span></td>
+      <td style="color:var(--tp);font-weight:600">Data Quality &amp; Reconciliation Gate Service</td>
+      <td>Low-code completeness/quality checks plus dimensional reconciliation to GL/consolidation/EPM golden source; blocks downstream AI generation on failure.</td>
+      <td><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span> <span class="sop-tag">FP&amp;A Predictive Forecasting Process</span> <span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span> <span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$43K</td>
+      <td><span class="pri-badge high">High</span></td>
+      <td><span class="chip phase1">Phase 1</span></td>
+    </tr>
+    <tr>
+      <td><span class="svc-id">S03</span></td>
+      <td style="color:var(--tp);font-weight:600">Detection &amp; Monitoring Service (Anomaly/Trend/Model)</td>
+      <td>Rule + statistical + ML detection across metrics, trend detection, and MLOps drift/bias monitoring, publishing prioritized alerts.</td>
+      <td><span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span> <span class="sop-tag">FP&amp;A Predictive Forecasting Process</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$71K</td>
+      <td><span class="pri-badge high">High</span></td>
+      <td><span class="chip phase1">Phase 1</span></td>
+    </tr>
+    <tr>
+      <td><span class="svc-id">S04</span></td>
+      <td style="color:var(--tp);font-weight:600">Root-Cause &amp; Quality-Review Service (Exception Mgmt)</td>
+      <td>Driver-decomposition and reason-code engine explaining anomalies/variances and reviewing commentary quality.</td>
+      <td><span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span> <span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$38K</td>
+      <td><span class="pri-badge high">High</span></td>
+      <td><span class="chip phase2">Phase 2</span></td>
+    </tr>
+    <tr>
+      <td><span class="svc-id">S05</span></td>
+      <td style="color:var(--tp);font-weight:600">Decision Intelligence Service (Biarritz Models)</td>
+      <td>Biarritz-served analytical models producing baselines and driver classifications with confidence indicators.</td>
+      <td><span class="sop-tag">FP&amp;A Predictive Forecasting Process</span> <span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$48K</td>
+      <td><span class="pri-badge medium">Medium</span></td>
+      <td><span class="chip phase2">Phase 2</span></td>
+    </tr>
+    <tr>
+      <td><span class="svc-id">S06</span></td>
+      <td style="color:var(--tp);font-weight:600">Governed Data &amp; Integration Fabric (Federated Data Platform)</td>
+      <td>Shared Fabric Core Data Products, CRAFT/GPM/FCCS connectors, lineage, access control and audit — the data backbone every agent consumes.</td>
+      <td><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span> <span class="sop-tag">FP&amp;A Predictive Forecasting Process</span> <span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span> <span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$0</td>
+      <td><span class="pri-badge high">High</span></td>
+      <td><span class="chip phase1">Phase 1</span></td>
+    </tr>
+    <tr>
+      <td><span class="svc-id">S07</span></td>
+      <td style="color:var(--tp);font-weight:600">Orchestration, Tone &amp; Responsible-AI Governance Layer</td>
+      <td>ServiceNow triage/escalation/SLA orchestration, the shared tone/rewrite service, and the Responsible-AI/CHANEL-TECH governance controls (approval, monitoring, IP/exit) every agent must pass.</td>
+      <td><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span> <span class="sop-tag">FP&amp;A Predictive Forecasting Process</span> <span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span> <span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$17K</td>
+      <td><span class="pri-badge medium">Medium</span></td>
+      <td><span class="chip phase3">Phase 3</span></td>
+    </tr></tbody>
+    </table></div>
+  </div></div>
+  <div class="section" id="sec-economics"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Portfolio Economics</div>
+      <h2 class="sec-h">Investment <strong>Economics</strong></h2>
+      <p class="sec-sub">Current per-SOP plan vs consolidated platform model — implementation cost, savings and payback.</p>
+    </div>
+    <div class="econ-kpis">
+      <div class="econ-kpi" style="border-left-color:var(--green)">
+        <div class="ev green">$1.0M</div>
+        <div class="el">Total Annual Savings (GO UCs)</div></div>
+      <div class="econ-kpi">
+        <div class="ev">$1.0M</div>
+        <div class="el">Per-SOP Impl. Cost (current)</div></div>
+      <div class="econ-kpi" style="border-left-color:var(--green)">
+        <div class="ev green">$711K</div>
+        <div class="el">Consolidated Impl. Cost</div></div>
+      <div class="econ-kpi" style="border-left-color:var(--blue)">
+        <div class="ev blue">12.0mo → 8.4mo</div>
+        <div class="el">Payback: Current → Consolidated</div></div>
+      <div class="econ-kpi" style="border-left-color:var(--teal)">
+        <div class="ev" style="color:var(--teal)">8.2</div>
+        <div class="el">FTE Reduction Estimate</div></div>
+      <div class="econ-kpi" style="border-left-color:var(--green)">
+        <div class="ev green">$2.3M</div>
+        <div class="el">3-Year Net Benefit (Consolidated)</div></div>
+    </div>
+
+    <div class="plan-compare">
+      <div class="plan-box current">
+        <div class="pb-lbl">Current Plan — Per-SOP</div>
+        <div class="pb-row"><span class="pk">Impl. Cost</span><span class="pv">$1.0M</span></div>
+        <div class="pb-row"><span class="pk">Annual Savings</span><span class="pv green">$1.0M</span></div>
+        <div class="pb-row"><span class="pk">Payback</span><span class="pv">12.0 months</span></div>
+      </div>
+      <div class="plan-arrow">
+        <div class="pa-sym">→</div>
+        <div class="pa-lbl">Save 30%<br>impl cost</div>
+      </div>
+      <div class="plan-box consolidated">
+        <div class="pb-lbl">Consolidated Platform</div>
+        <div class="pb-row"><span class="pk">Impl. Cost</span><span class="pv">$711K</span></div>
+        <div class="pb-row"><span class="pk">Annual Savings</span><span class="pv green">$1.0M</span></div>
+        <div class="pb-row"><span class="pk">Payback</span><span class="pv green">8.4 months (-3.6mo faster)</span></div>
+      </div>
+    </div>
+
+    <div class="bar-compare">
+      <div class="bc-title">Implementation Cost Comparison</div>
+      <div class="bar-row">
+        <div class="br-lbl">Per-SOP Plan</div>
+        <div class="br-track">
+          <div class="br-fill current" style="width:100.0%">
+            <span class="bv">$1.0M</span></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="br-lbl">Consolidated</div>
+        <div class="br-track">
+          <div class="br-fill consolidated" style="width:70.0%">
+            <span class="bv">$711K</span></div></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="section" id="sec-roadmap"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Implementation Roadmap</div>
+      <h2 class="sec-h">Phased <strong>Roadmap</strong></h2>
+      <p class="sec-sub">Three-phase delivery plan — foundation, expansion and optimisation — with cost, savings and critical path per phase.</p>
+    </div>
+    <div class="phase-cards">
+    <div class="phase-card" data-phase="1">
+      <div class="pc-head">
+        <span class="pc-num">Phase 1: Foundation + Commentary Pilot</span>
+        <span class="pc-range">Months 0-6</span>
+      </div>
+      <div class="pc-stats">
+        <div><div class="pcs-v">$384K</div><div class="pcs-l">Impl. Cost</div></div>
+        <div><div class="pcs-v" style="color:var(--green)">$430K</div>
+          <div class="pcs-l">Savings by End</div></div>
+      </div>
+      <div class="pc-lbl">Deliverables</div><ul><li>Governed Data &amp; Integration Fabric backbone (S06) certified for FP&amp;A</li><li>Shared low-code Data Quality &amp; Reconciliation Gate (S02) live</li><li>FP&amp;A Narrative &amp; Synthesis Service (S01) piloting the flagship Commentary Drafting + Driver Classification + numerical/quality validators</li><li>Detection &amp; Monitoring Service (S03) piloting anomaly detection in one region</li><li>Responsible AI approval pattern established</li></ul>
+      <div class="pc-lbl">Pilot SOPs</div><div class="pilot-tags"><span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span><span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span></div>
+      <div class="pc-lbl">Clusters in Phase</div><div style="display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.25rem"><span class="chip phase1">C10</span> <span class="chip phase1">C06</span> <span class="chip phase1">C04</span></div>
+      <div class="pc-path">⚡ Certify Fabric Core Data Products (S06) -&gt; build shared quality/reconciliation gate (S02) -&gt; ship Commentary copilot + guardrails (S01) -&gt; pilot anomaly detection (S03)</div>
+      <div class="pc-lbl">Dependencies</div><ul><li>Fabric Core Data Products certified</li><li>Responsible AI + CHANEL TECH approval</li><li>Approved prompt libraries</li></ul>
+      <div class="pc-lbl">Gating Decisions</div><ul><li>Responsible AI sign-off for commentary and anomaly ML</li><li>Pilot-market selection</li></ul>
+    </div>
+    <div class="phase-card" data-phase="2">
+      <div class="pc-head">
+        <span class="pc-num">Phase 2: Expansion — Intelligence &amp; Exception Services</span>
+        <span class="pc-range">Months 7-12</span>
+      </div>
+      <div class="pc-stats">
+        <div><div class="pcs-v">$227K</div><div class="pcs-l">Impl. Cost</div></div>
+        <div><div class="pcs-v" style="color:var(--green)">$750K</div>
+          <div class="pcs-l">Savings by End</div></div>
+      </div>
+      <div class="pc-lbl">Deliverables</div><ul><li>Root-Cause &amp; Quality-Review Service (S04) live for anomaly RCA and commentary quality review</li><li>Decision Intelligence Service (S05) delivering baseline forecasting + driver classification at scale</li><li>Alert triage/case orchestration and trend detection scaled</li><li>Forecast-implication linkage between commentary and CRAFT</li></ul>
+      <div class="pc-lbl">Pilot SOPs</div><div class="pilot-tags"><span class="sop-tag">FP&amp;A Predictive Forecasting Process</span></div>
+      <div class="pc-lbl">Clusters in Phase</div><div style="display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.25rem"><span class="chip phase2">C08</span> <span class="chip phase2">C03</span> <span class="chip phase2">C02</span></div>
+      <div class="pc-path">⚡ Reuse S01/S02/S03 -&gt; build S04 root-cause/quality -&gt; build S05 Biarritz baseline forecasting -&gt; scale triage</div>
+      <div class="pc-lbl">Dependencies</div><ul><li>S01/S02/S03 in production</li><li>Biarritz models validated in inventory</li><li>Reason-code taxonomy governed</li></ul>
+      <div class="pc-lbl">Gating Decisions</div><ul><li>Forecasting model validation &amp; Responsible AI</li><li>Consolidation-service reuse decision</li></ul>
+    </div>
+    <div class="phase-card" data-phase="3">
+      <div class="pc-head">
+        <span class="pc-num">Phase 3: Optimisation — Governance, Orchestration &amp; CONDITIONAL Unblocks</span>
+        <span class="pc-range">Months 13-18</span>
+      </div>
+      <div class="pc-stats">
+        <div><div class="pcs-v">$100K</div><div class="pcs-l">Impl. Cost</div></div>
+        <div><div class="pcs-v" style="color:var(--green)">$1.0M</div>
+          <div class="pcs-l">Savings by End</div></div>
+      </div>
+      <div class="pc-lbl">Deliverables</div><ul><li>Orchestration, Tone &amp; Governance layer (S07) unifying escalation, tone and Responsible-AI monitoring</li><li>Reconciliation service extended to forecasting consolidation</li><li>CONDITIONAL use cases unblocked as platform features (dashboard validation, cycle orchestration, KPI-change governance, scenario module, adjustment validator, model monitoring, escalation)</li><li>MLOps drift/bias monitoring across all models</li></ul>
+      <div class="pc-lbl">Pilot SOPs</div><div class="pilot-tags"><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span></div>
+      <div class="pc-lbl">Clusters in Phase</div><div style="display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.25rem"><span class="chip phase3">C09</span> <span class="chip phase3">C07</span></div>
+      <div class="pc-path">⚡ Extend reconciliation (S09/S02) -&gt; ship orchestration/tone/governance (S07) -&gt; bundle CONDITIONAL features onto shared services</div>
+      <div class="pc-lbl">Dependencies</div><ul><li>ServiceNow Finance service-management enabled</li><li>KPI dependency catalog built</li><li>Shared services stable</li></ul>
+      <div class="pc-lbl">Gating Decisions</div><ul><li>Build KPI-to-report dependency catalog (unblocks reporting UC-05)</li><li>ServiceNow Finance enablement</li></ul>
+    </div></div>
+    <div id="roadmap-chart" style="margin-top:1.5rem;background:var(--l01);border:1px solid var(--bs);padding:1.25rem">
+      <div class="section-eyebrow">Savings Realised by Phase-End</div>
+      <svg id="roadmap-svg" width="100%" height="120"></svg>
+    </div>
+  </div></div>
+  <div class="section" id="sec-heatmap"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Cross-SOP Heatmap</div>
+      <h2 class="sec-h">Cluster × SOP <strong>Heatmap</strong></h2>
+      <p class="sec-sub">GO use case count per cluster (row) per SOP (column). Darker cells = more approved automation.</p>
+    </div>
+    <div class="heatmap-wrap">
+      <svg id="hmap-svg"></svg>
+    </div>
+    <div class="hm-legend">
+      <span>0 GO UCs</span>
+      <span class="hml-grad"></span>
+      <span>Max GO UCs</span>
+    </div>
+  </div></div>
+  <div class="section" id="sec-agents"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Canonical Agents</div>
+      <h2 class="sec-h">Agent <strong>Consolidation</strong></h2>
+      <p class="sec-sub">Agent types that appear across multiple SOPs — consolidation candidates for shared deployment.</p>
+    </div>
+    <div class="agent-grid">
+    <div class="agent-card">
+      <div class="ag-head">
+        <span class="ag-id">A01</span>
+        <span class="ag-name">FP&amp;A Commentary &amp; Synthesis Analyzer (Canonical)</span>
+        <span class="ag-rec consolidate">Consolidate</span>
+      </div>
+      <div class="ar"><span class="ak">Role</span>Drafts fact-grounded variance commentary and executive summaries from validated data across reporting and commentary SOPs.</div>
+      <div class="ar"><span class="ak">SOPs</span><span style="display:flex;flex-wrap:wrap;gap:.25rem"><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span> <span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></span></div>
+      <div class="ar"><span class="ak">Varies by</span>Reporting uses executive-pack prompts; Commentary uses per-line variance prompts + forecast-implication linkage; shared engine, materiality framework and luxury tone.</div>
+      <div class="ar"><span class="ak">Instances</span>4 separate designs</div>
+      
+      <div class="ar"><span class="ak">Tools</span>
+        <div class="tool-tags"><span class="tool-tag">fabric_data_product_reader</span><span class="tool-tag">llm_commentary_drafter</span><span class="tool-tag">threshold_engine</span><span class="tool-tag">prompt_library</span></div></div>
+    </div>
+    <div class="agent-card">
+      <div class="ag-head">
+        <span class="ag-id">A02</span>
+        <span class="ag-name">Reconciliation &amp; Data-Quality Validator (Canonical)</span>
+        <span class="ag-rec consolidate">Consolidate</span>
+      </div>
+      <div class="ar"><span class="ak">Role</span>Reconciles data to the golden source and runs completeness/quality checks before any AI generation.</div>
+      <div class="ar"><span class="ak">SOPs</span><span style="display:flex;flex-wrap:wrap;gap:.25rem"><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span> <span class="sop-tag">FP&amp;A Predictive Forecasting Process</span> <span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span> <span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></span></div>
+      <div class="ar"><span class="ak">Varies by</span>Different check/reconciliation packs (reporting GL recon, forecasting data-quality thresholds, anomaly red flags, commentary EPM-version match); shared engine and ServiceNow logging.</div>
+      <div class="ar"><span class="ak">Instances</span>4 separate designs</div>
+      
+      <div class="ar"><span class="ak">Tools</span>
+        <div class="tool-tags"><span class="tool-tag">fabric_data_product_reader</span><span class="tool-tag">recon_rule_engine</span><span class="tool-tag">gpm_fccs_connector</span><span class="tool-tag">issue_log_writer</span></div></div>
+    </div>
+    <div class="agent-card">
+      <div class="ag-head">
+        <span class="ag-id">A03</span>
+        <span class="ag-name">Detection &amp; Monitoring Agent (Canonical)</span>
+        <span class="ag-rec consolidate">Consolidate</span>
+      </div>
+      <div class="ar"><span class="ak">Role</span>Runs rule+statistical+ML detection and MLOps drift/bias monitoring, publishing prioritized alerts.</div>
+      <div class="ar"><span class="ak">SOPs</span><span style="display:flex;flex-wrap:wrap;gap:.25rem"><span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span> <span class="sop-tag">FP&amp;A Predictive Forecasting Process</span></span></div>
+      <div class="ar"><span class="ak">Varies by</span>Anomaly detection/trend vs forecasting data-quality &amp; model monitoring; shared Biarritz MLOps and alerting.</div>
+      <div class="ar"><span class="ak">Instances</span>4 separate designs</div>
+      
+      <div class="ar"><span class="ak">Tools</span>
+        <div class="tool-tags"><span class="tool-tag">biarritz_ml_scorer</span><span class="tool-tag">statistical_engine</span><span class="tool-tag">fabric_data_product_reader</span><span class="tool-tag">alert_publisher</span></div></div>
+    </div>
+    <div class="agent-card">
+      <div class="ag-head">
+        <span class="ag-id">A04</span>
+        <span class="ag-name">Root-Cause &amp; Quality-Review Analyzer (Canonical)</span>
+        <span class="ag-rec consolidate">Consolidate</span>
+      </div>
+      <div class="ar"><span class="ak">Role</span>Decomposes variances into drivers with reason codes and reviews narrative quality.</div>
+      <div class="ar"><span class="ak">SOPs</span><span style="display:flex;flex-wrap:wrap;gap:.25rem"><span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span> <span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></span></div>
+      <div class="ar"><span class="ak">Varies by</span>Anomaly RCA vs commentary quality review; shared decomposition and reason-code logic.</div>
+      <div class="ar"><span class="ak">Instances</span>2 separate designs</div>
+      
+      <div class="ar"><span class="ak">Tools</span>
+        <div class="tool-tags"><span class="tool-tag">driver_decomposition_engine</span><span class="tool-tag">reason_code_classifier</span><span class="tool-tag">llm_explainer</span><span class="tool-tag">fabric_data_product_reader</span></div></div>
+    </div>
+    <div class="agent-card">
+      <div class="ag-head">
+        <span class="ag-id">A05</span>
+        <span class="ag-name">ServiceNow Orchestration &amp; Escalation Router (Canonical)</span>
+        <span class="ag-rec consolidate">Consolidate</span>
+      </div>
+      <div class="ar"><span class="ak">Role</span>Triage, prioritization, owner/SLA assignment and escalation routing.</div>
+      <div class="ar"><span class="ak">SOPs</span><span style="display:flex;flex-wrap:wrap;gap:.25rem"><span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span> <span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span></span></div>
+      <div class="ar"><span class="ak">Varies by</span>Anomaly alert triage/escalation vs reporting-cycle orchestration; shared ServiceNow workflow.</div>
+      <div class="ar"><span class="ak">Instances</span>3 separate designs</div>
+      
+      <div class="ar"><span class="ak">Tools</span>
+        <div class="tool-tags"><span class="tool-tag">servicenow_workflow</span><span class="tool-tag">priority_scorer</span><span class="tool-tag">escalation_router</span><span class="tool-tag">sla_monitor</span></div></div>
+    </div></div>
+  </div></div>
+  <div class="section" id="sec-risks"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Portfolio Risk Register</div>
+      <h2 class="sec-h">Risk <strong>Register</strong></h2>
+      <p class="sec-sub">Cross-SOP portfolio-level risks — not duplicated from individual Wave 2 UC analyses.</p>
+    </div>
+    <div style="display:flex;gap:.375rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
+      <span class="fchip-lbl">Category</span>
+      <button class="fchip active" onclick="filterRisk()" data-cat="all">All</button>
+      <button class="fchip" onclick="filterRisk()" data-cat="Technical">Technical</button><button class="fchip" onclick="filterRisk()" data-cat="Regulatory">Regulatory</button><button class="fchip" onclick="filterRisk()" data-cat="Organizational">Organizational</button>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="risk-table">
+        <thead><tr>
+          <th>ID</th><th>Risk</th><th>Category</th>
+          <th>Likelihood</th><th>Impact</th><th>Mitigation</th><th>Affects</th>
+        </tr></thead>
+        <tbody id="risk-tbody"><tr data-cat="Technical">
+      <td><span class="risk-id">R01</span></td>
+      <td style="max-width:280px">Shared Fabric/CRAFT/GPM-FCCS integration and the HERO/D365 migration are a single point of dependency for every FP&amp;A agent; legacy AX V6 data during transition is not fully API-accessible.</td>
+      <td><span class="risk-cat technical">Technical</span></td>
+      <td><span class="chip high">High</span></td>
+      <td><span class="chip high">High</span></td>
+      <td style="max-width:280px;font-size:.75rem">Sequence S06 (data backbone) first; certify Core Data Products; treat legacy sources via approved reconciliation until migrated; do not represent legacy data as certified HERO products.</td>
+      <td><div class="sops-inline"><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span> <span class="sop-tag">FP&amp;A Predictive Forecasting Process</span> <span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span> <span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></div></td>
+    </tr><tr data-cat="Regulatory">
+      <td><span class="risk-id">R02</span></td>
+      <td style="max-width:280px">Responsible AI / CHANEL TECH approval is a mandatory gate for every LLM/ML/agent use case; a slow or inconsistent governance process could stall the entire portfolio.</td>
+      <td><span class="risk-cat regulatory">Regulatory</span></td>
+      <td><span class="chip medium">Medium</span></td>
+      <td><span class="chip high">High</span></td>
+      <td style="max-width:280px;font-size:.75rem">Establish one reusable Responsible AI approval pattern in Phase 1 (via the commentary pilot); reuse for all subsequent agents; keep humans-in-the-loop and audit trails by design.</td>
+      <td><div class="sops-inline"><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span> <span class="sop-tag">FP&amp;A Predictive Forecasting Process</span> <span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span> <span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></div></td>
+    </tr><tr data-cat="Organizational">
+      <td><span class="risk-id">R03</span></td>
+      <td style="max-width:280px">Analysts across four SOPs are asked to shift from producing to reviewing AI output simultaneously; overlapping change demands on the same FP&amp;A roles risk adoption failure and over-trust/under-trust of AI.</td>
+      <td><span class="risk-cat organizational">Organizational</span></td>
+      <td><span class="chip medium">Medium</span></td>
+      <td><span class="chip high">High</span></td>
+      <td style="max-width:280px;font-size:.75rem">Phase adoption (commentary copilot first as the clearest win); position agents as copilots with mandatory review sign-off; train on professional skepticism; measure Forecast Value Added / unsupported-claim rate.</td>
+      <td><div class="sops-inline"><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span> <span class="sop-tag">FP&amp;A Predictive Forecasting Process</span> <span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span> <span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span></div></td>
+    </tr><tr data-cat="Regulatory">
+      <td><span class="risk-id">R04</span></td>
+      <td style="max-width:280px">Confidentiality exposure — commentary, boutique-level, margin and client data flow through shared LLM services; a leak to an unapproved tool or over-shared summary would breach Chanel confidentiality/GDPR.</td>
+      <td><span class="risk-cat regulatory">Regulatory</span></td>
+      <td><span class="chip medium">Medium</span></td>
+      <td><span class="chip high">High</span></td>
+      <td style="max-width:280px;font-size:.75rem">Enforce CHANEL-owned environments only (no public AI), data minimization, access-rights-aware generation, DaaS/MFA; incident procedures per SOP.</td>
+      <td><div class="sops-inline"><span class="sop-tag">Standardizing Management Reporting and KPI Dashboards</span> <span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span> <span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span></div></td>
+    </tr><tr data-cat="Technical">
+      <td><span class="risk-id">R05</span></td>
+      <td style="max-width:280px">LLM hallucination / false-positive drift — commentary agents can fabricate drivers and detection models can over-alert, eroding trust and putting inaccurate narrative in front of leadership.</td>
+      <td><span class="risk-cat technical">Technical</span></td>
+      <td><span class="chip medium">Medium</span></td>
+      <td><span class="chip high">High</span></td>
+      <td style="max-width:280px;font-size:.75rem">Build the numerical + quality validators and the MLOps monitor as first-class guardrails (Phase 1-2); 'requires confirmation' defaults; threshold calibration; reason codes and explainability everywhere.</td>
+      <td><div class="sops-inline"><span class="sop-tag">AI-Assisted Variance Analysis &amp; Commentary</span> <span class="sop-tag">FP&amp;A Intelligent Anomaly and Trend Detection</span> <span class="sop-tag">FP&amp;A Predictive Forecasting Process</span></div></td>
+    </tr></tbody>
+      </table></div>
+  </div></div>
+  <div class="section" id="sec-recommendation"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Strategic Recommendation</div>
+      <h2 class="sec-h">Strategic <strong>Recommendation</strong></h2>
+      <p class="sec-sub">Recommended implementation path with rationale, priority sequence and 90-day quick wins.</p>
+    </div>
+
+    <div class="rec-path-badge">
+      <div>
+        <div class="rp-path">Platform-First</div>
+        <div class="rp-sub">Recommended implementation path</div>
+      </div>
+    </div>
+
+    <div class="rec-block">
+      <div class="rb-head">Rationale</div>
+      <div class="rb-text">The portfolio delivers ~$1,014,842 in annual savings across 18 GO use cases with zero NO-GOs, and the top three clusters (Knowledge Synthesis C10, Monitoring C06, Exception Management C08) together with Decision Intelligence C03 account for 11 of 18 GO use cases (&gt;60%), all built on the same Fabric + CRAFT + Biarritz + ServiceNow stack. Consolidating to seven shared platform services cuts implementation cost from $1,015,000 to $710,500 (30%) and blended payback from 12.0 to 8.4 months. Because the same commentary, reconciliation, detection and root-cause agents recur across all four SOPs, a platform-first build is decisively cheaper than four bespoke solutions.</div>
+    </div>
+
+    <div class="rec-block">
+      <div class="rb-head">Priority Sequence</div>
+      <div class="seq-row"><div class="seq-chip"><span class="sc-id">C10</span>
+      <span>Knowledge Synthesis (FP&amp;A commentary copilot)</span></div><div class="seq-chip"><span class="sc-id">C04</span>
+      <span>Data Entry Automation (shared data-quality gate)</span></div><div class="seq-chip"><span class="sc-id">C06</span>
+      <span>Monitoring &amp; Alerting (anomaly + model detection)</span></div><div class="seq-chip"><span class="sc-id">C08</span>
+      <span>Exception Management (root-cause &amp; quality review)</span></div><div class="seq-chip"><span class="sc-id">C03</span>
+      <span>Decision Intelligence (baseline forecasting + driver classification)</span></div></div>
+    </div>
+
+    <div class="rec-block">
+      <div class="rb-head">Quick Wins — First 90 Days</div>
+      <ul class="rec-list"><li><span class="ri">1.</span>Pilot the Variance Commentary Drafting Agent + Driver Classification module on 2 markets — payback &lt;5 months, ~$174.8k/yr from the commentary SOP alone (Owner: FP&amp;A Manager + AI Product Owner)</li><li><span class="ri">2.</span>Deploy the shared low-code Data Quality &amp; Reconciliation Gate (Power Automate) as the mandatory pre-AI control across reporting, forecasting, anomaly and commentary — ~$44k/yr combined, 3-week builds (Owner: Data Analytics)</li><li><span class="ri">3.</span>Stand up the numerical + quality validators alongside the commentary pilot so AI drafts are trustworthy from day one (Owner: FP&amp;A Manager)</li></ul>
+    </div>
+
+    <div class="rec-block">
+      <div class="rb-head">Key Success Factors</div>
+      <ul class="rec-list"><li><span class="ri">✓</span>Certified Fabric Core Data Products as the shared backbone</li><li><span class="ri">✓</span>One reusable Responsible AI / CHANEL TECH approval pattern</li><li><span class="ri">✓</span>Copilot positioning with mandatory human review and audit trails</li><li><span class="ri">✓</span>Shared reconciliation/data-quality gate before any AI generation</li><li><span class="ri">✓</span>Calibrated thresholds and MLOps monitoring to control false positives</li></ul>
+    </div>
+
+    <div class="rec-block">
+      <div class="rb-head">Long-term Vision</div>
+      <div class="rb-text">A single governed FP&amp;A agent platform on Fabric/CRAFT/Biarritz where reconciliation, detection, commentary, root-cause and forecasting are shared services consumed by every FP&amp;A process, with Responsible-AI governance and human review built in — analysts move decisively from producing reports to interrogating AI-generated insight.</div>
+    </div>
+
+    <div style="margin-top:2rem;padding:1rem;background:var(--l01);border:1px solid var(--bs);
+        font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.625rem;color:var(--tpl)">
+      Synthesis method: benchmark_based ·
+      Generated: 2026-09-03 ·
+      All financial figures are benchmark-derived: the four SOPs state no FP&amp;A headcount, hourly rates, transaction volumes or cycle counts, so volumes were estimated from process cadence and organizational breadth (Global/Regional/Market/Division) and priced at fully-loaded benchmark rates (Analyst $57/hr, Senior $77/hr, Ops $40/hr). Consolidation uses the standard 30% shared-platform efficiency factor. GO economics include only GO use cases; 10 CONDITIONAL use cases (mostly negative-standalone-ROI or blocked-dependency items) are excluded from GO totals and are recommended for delivery as bundled features of the shared services in Phase 3. Cluster savings are indicative consolidation potential, not additive to portfolio savings.
+    </div>
+  </div></div>
+</div>
+<script>
+// ── nav ──────────────────────────────────────────────────────────────────────
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  const sec = document.getElementById('sec-' + id);
+  if (sec) sec.classList.add('active');
+  const btn = document.querySelector('.nav-btn[data-id="' + id + '"]');
+  if (btn) btn.classList.add('active');
+  const hash = '#' + id;
+  if (location.hash !== hash) history.replaceState(null,'',hash);
+  if (id === 'heatmap') drawHeatmap();
+  if (id === 'roadmap') drawRoadmapChart();
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const id = (location.hash || '#overview').replace('#','');
+  showSection(id);
+});
+
+// ── UC filter ─────────────────────────────────────────────────────────────────
+function filterUC() {
+  const query = (document.getElementById('uc-search') || {}).value || '';
+  const q = query.toLowerCase();
+  const decBtn = document.querySelector('#sec-portfolio .fchip.active[data-dec]');
+  const activeDec = decBtn ? decBtn.dataset.dec : 'all';
+  const sopBtn = document.querySelector('#sec-portfolio .fchip.active[data-sop]');
+  const activeSop = sopBtn ? sopBtn.dataset.sop : null;
+  let shown = 0;
+  document.querySelectorAll('.uc-card').forEach(card => {
+    const matchQ = !q || card.querySelector('.uc-name').textContent.toLowerCase().includes(q);
+    const matchD = activeDec === 'all' || card.dataset.dec === activeDec;
+    const matchS = !activeSop || card.dataset.sop === activeSop;
+    const visible = matchQ && matchD && matchS;
+    card.classList.toggle('hidden', !visible);
+    if (visible) shown++;
+  });
+  const cnt = document.getElementById('uc-count');
+  if (cnt) cnt.textContent = shown + ' use case' + (shown !== 1 ? 's' : '');
+}
+
+document.addEventListener('click', e => {
+  const fchip = e.target.closest('.fchip');
+  if (!fchip) return;
+  const parent = fchip.closest('.fchip-group');
+  if (!parent) return;
+  parent.querySelectorAll('.fchip').forEach(c => c.classList.remove('active'));
+  fchip.classList.add('active');
+  filterUC();
+});
+
+// ── UC card expand ────────────────────────────────────────────────────────────
+function toggleUC(card) {
+  card.classList.toggle('open');
+}
+
+// ── Risk filter ───────────────────────────────────────────────────────────────
+function filterRisk() {}
+document.addEventListener('click', e => {
+  const rb = e.target.closest('.fchip[data-cat]');
+  if (!rb) return;
+  const par = rb.closest('div');
+  if (par) par.querySelectorAll('.fchip').forEach(c => c.classList.remove('active'));
+  rb.classList.add('active');
+  const cat = rb.dataset.cat;
+  document.querySelectorAll('#risk-tbody tr').forEach(row => {
+    row.classList.toggle('hidden', cat !== 'all' && row.dataset.cat !== cat);
+  });
+});
+
+// ── D3 heatmap ────────────────────────────────────────────────────────────────
+function drawHeatmap() {
+  const data = {"rows":["C02","C03","C04","C05","C06","C07","C08","C09","C10"],"columns":["mgmt-reporting-kpi-dashboards","predictive-forecasting","anomaly-trend-detection","variance-analysis-commentary"],"data":[[0,0,1,0],[0,1,0,1],[1,0,1,0],[0,0,0,1],[0,1,2,0],[0,0,0,1],[0,0,1,1],[1,0,0,0],[2,0,0,2]],"row_totals":[1,2,2,1,3,1,2,1,4],"col_totals":[4,2,5,6]};
+  if (!data || !data.rows || !data.columns || !data.data) return;
+  const svg = document.getElementById('hmap-svg');
+  if (!svg) return;
+  const rows = data.rows;
+  const cols = data.columns;
+  const matrix = data.data;
+  const rowTotals = data.row_totals || rows.map((_,i) => matrix[i] ? matrix[i].reduce((a,b)=>a+b,0) : 0);
+  const colTotals = data.col_totals || cols.map((_,j) => matrix.reduce((a,r)=>a+(r[j]||0),0));
+  const maxVal = Math.max(1, ...matrix.flat().filter(Number.isFinite));
+
+  const cellW = 70, cellH = 32, rowLblW = 80, totW = 40, totH = 30;
+  const padT = 50, padL = 10;
+  const W = padL + rowLblW + cols.length * cellW + totW + 20;
+  const H = padT + rows.length * cellH + totH + 10;
+
+  svg.setAttribute('width', W);
+  svg.setAttribute('height', H);
+  svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+
+  function hexToRgb(hex, a) {
+    const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    return 'rgba('+r+','+g+','+b+','+a+')';
+  }
+
+  let s = '';
+
+  // Column headers
+  cols.forEach((col, j) => {
+    const x = padL + rowLblW + j * cellW + cellW / 2;
+    s += '<text x="'+x+'" y="'+(padT-8)+'" text-anchor="middle" font-size="9" fill="#8a8072" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'
+      + col.replace(/-/g,'‑').substring(0,10) + '</text>';
+  });
+
+  // Row labels + cells
+  rows.forEach((row, i) => {
+    const y = padT + i * cellH;
+    s += '<text x="'+(padL+rowLblW-6)+'" y="'+(y+cellH/2+4)+'" text-anchor="end" font-size="9" fill="#8a8072" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'
+      + row + '</text>';
+    cols.forEach((col, j) => {
+      const v = (matrix[i] || [])[j] || 0;
+      const alpha = v === 0 ? 0 : 0.15 + 0.75 * (v / maxVal);
+      const fill  = v === 0 ? '#f7f4ee' : ('rgba(30,132,73,' + alpha.toFixed(2) + ')');
+      const x = padL + rowLblW + j * cellW;
+      s += '<rect x="'+(x+1)+'" y="'+(y+1)+'" width="'+(cellW-2)+'" height="'+(cellH-2)+'" rx="2" fill="'+fill+'" stroke="#efe9df" stroke-width="1"/>';
+      if (v > 0)
+        s += '<text x="'+(x+cellW/2)+'" y="'+(y+cellH/2+4)+'" text-anchor="middle" font-size="11" font-weight="700" fill="'+(alpha>0.6?'#1d1d1d':'#333333')+'" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'+v+'</text>';
+    });
+    // row total
+    const rx = padL + rowLblW + cols.length * cellW;
+    s += '<text x="'+(rx+totW/2)+'" y="'+(y+cellH/2+4)+'" text-anchor="middle" font-size="10" font-weight="700" fill="#b08d57" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'+(rowTotals[i]||0)+'</text>';
+  });
+
+  // Col totals
+  cols.forEach((col, j) => {
+    const x = padL + rowLblW + j * cellW;
+    const ty = padT + rows.length * cellH + totH / 2 + 4;
+    s += '<text x="'+(x+cellW/2)+'" y="'+ty+'" text-anchor="middle" font-size="10" font-weight="700" fill="#b08d57" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'+(colTotals[j]||0)+'</text>';
+  });
+
+  // Grid lines
+  for (let i = 0; i <= rows.length; i++) {
+    const y = padT + i * cellH;
+    s += '<line x1="'+(padL+rowLblW)+'" y1="'+y+'" x2="'+(padL+rowLblW+cols.length*cellW)+'" y2="'+y+'" stroke="#efe9df" stroke-width="1"/>';
+  }
+  for (let j = 0; j <= cols.length; j++) {
+    const x = padL + rowLblW + j * cellW;
+    s += '<line x1="'+x+'" y1="'+padT+'" x2="'+x+'" y2="'+(padT+rows.length*cellH)+'" stroke="#efe9df" stroke-width="1"/>';
+  }
+
+  // Labels "Row Totals" / "Col Totals"
+  const ty = padT + rows.length * cellH + totH / 2 + 4;
+  const rx = padL + rowLblW + cols.length * cellW;
+  s += '<text x="'+(rx+totW/2)+'" y="'+ty+'" text-anchor="middle" font-size="8" fill="#8a8072" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">Σ</text>';
+  s += '<text x="'+(padL+rowLblW-6)+'" y="'+ty+'" text-anchor="end" font-size="8" fill="#8a8072" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">Σ</text>';
+
+  svg.innerHTML = s;
+}
+
+// ── Roadmap savings chart ─────────────────────────────────────────────────────
+function drawRoadmapChart() {
+  const rollout = [{"phase":1,"name":"Foundation + Commentary Pilot","timeframe":"Months 0-6","deliverables":["Governed Data & Integration Fabric backbone (S06) certified for FP&A","Shared low-code Data Quality & Reconciliation Gate (S02) live","FP&A Narrative & Synthesis Service (S01) piloting the flagship Commentary Drafting + Driver Classification + numerical/quality validators","Detection & Monitoring Service (S03) piloting anomaly detection in one region","Responsible AI approval pattern established"],"pilot_sops":["AI-Assisted Variance Analysis & Commentary","FP&A Intelligent Anomaly and Trend Detection"],"services_in_phase":["C10","C06","C04"],"cost":384000,"savings_realized_by_end":430000,"critical_path":"Certify Fabric Core Data Products (S06) -> build shared quality/reconciliation gate (S02) -> ship Commentary copilot + guardrails (S01) -> pilot anomaly detection (S03)","dependencies":["Fabric Core Data Products certified","Responsible AI + CHANEL TECH approval","Approved prompt libraries"],"gating_decisions":["Responsible AI sign-off for commentary and anomaly ML","Pilot-market selection","Data-product certification complete"]},{"phase":2,"name":"Expansion — Intelligence & Exception Services","timeframe":"Months 7-12","deliverables":["Root-Cause & Quality-Review Service (S04) live for anomaly RCA and commentary quality review","Decision Intelligence Service (S05) delivering baseline forecasting + driver classification at scale","Alert triage/case orchestration and trend detection scaled","Forecast-implication linkage between commentary and CRAFT"],"pilot_sops":["FP&A Predictive Forecasting Process"],"services_in_phase":["C08","C03","C02"],"cost":226500,"savings_realized_by_end":750000,"critical_path":"Reuse S01/S02/S03 -> build S04 root-cause/quality -> build S05 Biarritz baseline forecasting -> scale triage","dependencies":["S01/S02/S03 in production","Biarritz models validated in inventory","Reason-code taxonomy governed"],"gating_decisions":["Forecasting model validation & Responsible AI","Consolidation-service reuse decision","MLOps monitoring go-live"]},{"phase":3,"name":"Optimisation — Governance, Orchestration & CONDITIONAL Unblocks","timeframe":"Months 13-18","deliverables":["Orchestration, Tone & Governance layer (S07) unifying escalation, tone and Responsible-AI monitoring","Reconciliation service extended to forecasting consolidation","CONDITIONAL use cases unblocked as platform features (dashboard validation, cycle orchestration, KPI-change governance, scenario module, adjustment validator, model monitoring, escalation)","MLOps drift/bias monitoring across all models"],"pilot_sops":["Standardizing Management Reporting and KPI Dashboards"],"services_in_phase":["C09","C07"],"cost":100000,"savings_realized_by_end":1014842,"critical_path":"Extend reconciliation (S09/S02) -> ship orchestration/tone/governance (S07) -> bundle CONDITIONAL features onto shared services","dependencies":["ServiceNow Finance service-management enabled","KPI dependency catalog built","Shared services stable"],"gating_decisions":["Build KPI-to-report dependency catalog (unblocks reporting UC-05)","ServiceNow Finance enablement","Scenario/consolidation reuse sign-off"]}];
+  const svg = document.getElementById('roadmap-svg');
+  if (!svg || !rollout || !rollout.length) return;
+  const W = svg.parentElement ? svg.parentElement.clientWidth - 40 : 600;
+  const H = 100;
+  svg.setAttribute('viewBox', '0 0 '+W+' '+H);
+  const maxV = Math.max(1, ...rollout.map(p => p.savings_realized_by_end || 0));
+  const bw = (W - 40) / rollout.length;
+  const colors = ['#1e8449','#a6720d','#5b4636'];
+  let s = '';
+  rollout.forEach((p, i) => {
+    const v  = p.savings_realized_by_end || 0;
+    const bh = Math.max(4, (v / maxV) * (H - 30));
+    const x  = 20 + i * bw + bw * 0.15;
+    const w  = bw * 0.7;
+    const y  = H - 20 - bh;
+    const col = colors[i % colors.length];
+    s += '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+bh+'" rx="2" fill="'+col+'" opacity=".85"/>';
+    if (v > 0) s += '<text x="'+(x+w/2)+'" y="'+(y-5)+'" text-anchor="middle" font-size="9" font-weight="700" fill="'+col+'" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'+
+      (v>=1e6 ? '$'+(v/1e6).toFixed(1)+'M' : v>=1e3 ? '$'+Math.round(v/1e3)+'K' : '$'+v) + '</text>';
+    const lbl = (p.name || 'Phase '+(i+1)).replace('Foundation + Pilot','Ph1').replace('Foundation','Ph1').replace('Expansion','Ph2').replace('Optimisation','Ph3').replace('Optimization','Ph3').substring(0,12);
+    s += '<text x="'+(x+w/2)+'" y="'+(H-6)+'" text-anchor="middle" font-size="9" fill="#8a8072" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'+lbl+'</text>';
+  });
+  svg.setAttribute('height', H);
+  svg.innerHTML = s;
+}
+
+window.addEventListener('resize', () => {
+  if (document.getElementById('sec-heatmap').classList.contains('active')) drawHeatmap();
+  if (document.getElementById('sec-roadmap').classList.contains('active')) drawRoadmapChart();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* ── Landing-page-only additions (built on top of dashboard.css tokens) ── */
+
+.domain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-top:1.25rem}
+.domain-card{background:var(--l01);border:1px solid var(--bs);border-top:4px solid var(--blue);
+  padding:1.375rem 1.5rem;text-decoration:none;color:inherit;display:block;transition:transform .18s,background .15s}
+.domain-card:hover{background:var(--lh);transform:translateY(-2px)}
+.domain-card .dc-code{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.6875rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin-bottom:.5rem}
+.domain-card .dc-name{font-size:1.125rem;font-weight:600;color:var(--tp);margin-bottom:.75rem}
+.domain-card .dc-stats{display:flex;gap:1.5rem;margin-bottom:.875rem}
+.domain-card .dc-sv{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1.375rem;font-weight:700;color:var(--green);line-height:1}
+.domain-card .dc-sl{font-size:.5625rem;color:var(--tpl);text-transform:uppercase;letter-spacing:.06em;margin-top:.25rem}
+.domain-card .dc-bar{height:6px;background:var(--l02);border-radius:2px;overflow:hidden;margin-bottom:.875rem}
+.domain-card .dc-bar-fill{height:100%;background:var(--blue);border-radius:2px}
+.domain-card .dc-cta{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.625rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;color:var(--tpl);display:flex;align-items:center;gap:.375rem}
+.domain-card:hover .dc-cta{color:var(--blue)}
+.domain-card .dc-desc{font-size:.8125rem;color:var(--ts);margin-bottom:.875rem;line-height:1.5}
+
+.share-bar{display:flex;height:32px;border-radius:2px;overflow:visible;gap:2px;margin-top:1.25rem}
+.share-seg{display:flex;align-items:center;justify-content:center;font-size:.625rem;font-weight:700;
+  color:#1d1d1d;min-width:64px;white-space:nowrap;overflow:hidden;border-radius:2px}
+.share-legend{display:flex;gap:1.5rem;margin-top:.75rem;flex-wrap:wrap;font-size:.6875rem;color:var(--tpl)}
+.share-legend span{display:flex;align-items:center;gap:.4rem}
+.share-dot{width:9px;height:9px;border-radius:2px;flex-shrink:0}
+
+.method-note{font-size:.8125rem;color:var(--ts);line-height:1.65;max-width:760px}
+.method-note strong{color:var(--tp)}
+
+@media(max-width:768px){
+  .domain-grid{grid-template-columns:1fr}
+}

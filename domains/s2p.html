@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chanel — AI Investment Portfolio Dashboard</title>
+
+<link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+<body>
+<div class="top-bar">
+  <div class="logo">CHANEL <span>/ AI Portfolio</span></div>
+  <nav class="nav"><button class="nav-btn" data-id="overview" onclick="showSection('overview')">Overview</button><button class="nav-btn" data-id="portfolio" onclick="showSection('portfolio')">Portfolio</button><button class="nav-btn" data-id="clusters" onclick="showSection('clusters')">Clusters</button><button class="nav-btn" data-id="economics" onclick="showSection('economics')">Economics</button><button class="nav-btn" data-id="roadmap" onclick="showSection('roadmap')">Roadmap</button><button class="nav-btn" data-id="heatmap" onclick="showSection('heatmap')">Heatmap</button><button class="nav-btn" data-id="agents" onclick="showSection('agents')">Agents</button><button class="nav-btn" data-id="risks" onclick="showSection('risks')">Risks</button><button class="nav-btn" data-id="recommendation" onclick="showSection('recommendation')">Recommendation</button></nav>
+</div>
+<div class="main">
+  <div class="section active" id="sec-overview">
+<div class="hero">
+  <div class="hero-badge">AI Investment Portfolio Dashboard</div>
+  <h1>Chanel<br><strong>Procedure Eater Analysis</strong></h1>
+  <div class="subtitle">Cross-SOP AI opportunity portfolio — clusters, economics, phased roadmap and canonical agents.</div>
+  <div class="hero-meta">
+    <span><span class="dot"></span>Generated: 2026-09-03</span>
+    <span><span class="dot"></span>4 SOPs analysed</span>
+    <span><span class="dot"></span>Economics: Benchmark-based</span>
+  </div>
+</div>
+<div class="kpi-strip">
+  <div class="kpi"><div class="kv">4</div><div class="kl">SOPs</div>
+    <div class="kb"><div class="kbf teal" style="width:100%"></div></div></div>
+  <div class="kpi"><div class="kv">35</div><div class="kl">Total Use Cases</div>
+    <div class="kb"><div class="kbf blue" style="width:100%"></div></div></div>
+  <div class="kpi"><div class="kv green">27</div><div class="kl">GO</div>
+    <div class="kb"><div class="kbf green" style="width:77.1%"></div></div></div>
+  <div class="kpi"><div class="kv">8</div><div class="kl">Conditional</div>
+    <div class="kb"><div class="kbf brand" style="width:22.9%"></div></div></div>
+  <div class="kpi"><div class="kv">$3.0M</div><div class="kl">Annual Savings</div>
+    <div class="kb"><div class="kbf green" style="width:100%"></div></div></div>
+  <div class="kpi"><div class="kv">4.4<span style="font-size:1rem;font-weight:400">mo</span></div>
+    <div class="kl">Payback (consol.)</div>
+    <div class="kb"><div class="kbf brand" style="width:80%"></div></div></div>
+  <div class="kpi"><div class="kv teal">31.0</div><div class="kl">FTE Freed</div>
+    <div class="kb"><div class="kbf teal" style="width:75%"></div></div></div>
+  <div class="kpi"><div class="kv">30%</div><div class="kl">Consolidation Saving</div>
+    <div class="kb"><div class="kbf green" style="width:30%"></div></div></div>
+</div>
+<div class="funnel-wrap">
+  <div class="section-eyebrow">Decision Funnel — 35 use cases analysed</div>
+  <div class="funnel-bar">
+    <div class="funnel-seg go" style="flex:27">27 GO</div>
+    <div class="funnel-seg cond" style="flex:8">8 COND</div>
+    <div class="funnel-seg nogo" style="flex:1">0 NO-GO</div>
+  </div>
+  <div class="funnel-legend">
+    <span><span class="fl-dot" style="background:var(--green)"></span>GO: 27 (77.1%)</span>
+    <span><span class="fl-dot" style="background:var(--warn)"></span>Conditional: 8 (22.9%)</span>
+    <span><span class="fl-dot" style="background:var(--err)"></span>No-Go: 0 (0.0%)</span>
+  </div>
+</div></div>
+  <div class="section" id="sec-portfolio">
+<div class="filter-bar" id="portfolio-filter">
+  <div class="search-box"><input type="text" id="uc-search" placeholder="Search use cases…" oninput="filterUC()"></div>
+  <div class="fchip-group">
+    <span class="fchip-lbl">Decision</span>
+    <button class="fchip active" onclick="filterUC()" data-dec="all">All</button>
+    <button class="fchip" onclick="filterUC()" data-dec="go">GO</button>
+    <button class="fchip" onclick="filterUC()" data-dec="cond">Conditional</button>
+    <button class="fchip" onclick="filterUC()" data-dec="nogo">No-Go</button>
+  </div>
+  <div class="fchip-group"><span class="fchip-lbl">SOP</span><button class="fchip" onclick="filterUC()" data-sop="vendor-helpdesk">vendor-helpdesk</button><button class="fchip" onclick="filterUC()" data-sop="travel-expense-claims">travel-expense-claims</button><button class="fchip" onclick="filterUC()" data-sop="invoice-processing">invoice-processing</button><button class="fchip" onclick="filterUC()" data-sop="manage-supplier-payments">manage-supplier-payments</button></div>
+  <span class="fcount" id="uc-count">34 use cases</span>
+</div>
+<div class="sec-pad" style="padding-top:1.25rem">
+  <div class="uc-list" id="uc-list"><div class="uc-card go" data-dec="go" data-sop="vendor-helpdesk"
+        data-phase="1" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#1</span>
+        <span class="uc-name" title="When tickets approach SLA thresholds or age beyond target, monitor queues and trigger reminders/escalation alerts to owners and managers.">vendor-helpdesk</span>
+        <span class="uc-sop">vendor-helpdesk</span>
+        <span class="uc-score">79</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$13K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">16.3mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$18K</span></span>
+        <span class="m"><span>duration</span><span class="v">3w</span></span>
+        <span class="chip low" style="margin-left:.25rem">Low</span>
+        
+        <span class="chip phase1">Phase 1</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When tickets approach SLA thresholds or age beyond target, monitor queues and trigger reminders/escalation alerts to owners and managers.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 79 &gt;= 60 and technical_feasibility 68 &gt;= 50; native rule-based, quick win.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Alert fatigue from over-notification</li><li>SLA config drift as process changes</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Accurate SLA definitions</li><li>Tiered notification design</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="travel-expense-claims"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#2</span>
+        <span class="uc-name" title="When claims, approvals, or postings age beyond SLA, monitor status and issue tiered reminders and auto-escalation, and generate governed Fabric aging dashboards.">travel-expense-claims</span>
+        <span class="uc-sop">travel-expense-claims</span>
+        <span class="uc-score">76</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$45K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">12.3mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$46K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When claims, approvals, or postings age beyond SLA, monitor status and issue tiered reminders and auto-escalation, and generate governed Fabric aging dashboards.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 76 &gt;= 60 and technical_feasibility 58 &gt;= 50; explicit rules, approved platforms, addresses a named pain point.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Concur/AX data-quality gaps distort aging</li><li>HERO/D365 migration breaks AX feeds</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Governed Concur+AX data products</li><li>HERO transition path</li><li>Escalation tier config</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="vendor-helpdesk"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#3</span>
+        <span class="uc-name" title="When a triaged inquiry needs status, retrieve grounded invoice/payment status from D365 and PO/submission status from Coupa and assemble a verified data summary for the agent.">vendor-helpdesk</span>
+        <span class="uc-sop">vendor-helpdesk</span>
+        <span class="uc-score">76</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$106K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">8.1mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$72K</span></span>
+        <span class="m"><span>duration</span><span class="v">10w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a triaged inquiry needs status, retrieve grounded invoice/payment status from D365 and PO/submission status from Coupa and assemble a verified data summary for the agent.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 76 &gt;= 60 and technical_feasibility 65 &gt;= 50; read-only access is low-risk; highest per-SOP value.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>D365/Coupa status conflict produces ambiguous summary</li><li>Stale data from batch-synced systems misleads vendor</li><li>API access provisioning delays across HERO migration waves</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Read-only D365+Coupa API access</li><li>Reconciliation rule for conflicting states</li><li>Refresh-timestamp surfacing</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="vendor-helpdesk"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#4</span>
+        <span class="uc-name" title="When a vendor email arrives, classify language, inquiry category/subcategory, and priority, detect duplicates against open tickets, and extract invoice#/PO#/amount/vendor.">vendor-helpdesk</span>
+        <span class="uc-sop">vendor-helpdesk</span>
+        <span class="uc-score">74</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$93K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">7.5mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$58K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a vendor email arrives, classify language, inquiry category/subcategory, and priority, detect duplicates against open tickets, and extract invoice#/PO#/amount/vendor.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 74 &gt;= 60 and technical_feasibility 62 &gt;= 50; native Copilot Studio/Now Assist fit; high-volume repetitive bottleneck.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Misclassification in low-resource languages (TH/VN) degrades routing</li><li>Data quality of inbound emails (free-text, no structure) limits extraction accuracy</li><li>Change management: agents distrust auto-classification</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Per-language classification accuracy &gt;=95% target</li><li>ServiceNow taxonomy alignment</li><li>Agent override workflow</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="vendor-helpdesk"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#5</span>
+        <span class="uc-name" title="When a new inquiry requires a case, auto-create or update the ServiceNow ticket with all mandatory fields, channel metadata, category, priority and system-check results.">vendor-helpdesk</span>
+        <span class="uc-sop">vendor-helpdesk</span>
+        <span class="uc-score">74</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$50K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">7.2mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$30K</span></span>
+        <span class="m"><span>duration</span><span class="v">6w</span></span>
+        <span class="chip low" style="margin-left:.25rem">Low</span>
+        <span class="chip neutral">Executor</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a new inquiry requires a case, auto-create or update the ServiceNow ticket with all mandatory fields, channel metadata, category, priority and system-check results.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 74 &gt;= 60 and technical_feasibility 55 &gt;= 50; native ServiceNow execution, low risk.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Incomplete upstream extraction produces sparse tickets</li><li>Duplicate ticket creation if dedup (UC-01) misfires</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Reliable UC-01/UC-02 outputs</li><li>Mandatory-field validation</li><li>Dedup linkage</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="invoice-processing"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#6</span>
+        <span class="uc-name" title="When invoice performance is measured, generate governed touchless-rate/FPY/exception-aging dashboards by region/supplier/category on Microsoft Fabric.">invoice-processing</span>
+        <span class="uc-sop">invoice-processing</span>
+        <span class="uc-score">73</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$35K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">14.6mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$42K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When invoice performance is measured, generate governed touchless-rate/FPY/exception-aging dashboards by region/supplier/category on Microsoft Fabric.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 73 &gt;= 60 and technical_feasibility 56 &gt;= 50; approved Fabric platform, solid ROI, drives the SOP's improvement agenda. Deliver on the shared Analytics platform service.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Legacy vs HERO data inconsistency distorts KPIs</li><li>Reports not acted upon</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Governed data products</li><li>Legacy/HERO reconciliation</li><li>Governance to act on KPIs</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="manage-supplier-payments"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#7</span>
+        <span class="uc-name" title="When any supplier payment request is prepared, run automated 100% policy screening (supplier eligibility, approval authority, PO/contract, payment terms, duplicate, bank validation, DOA, spend-category) and flag violations.">manage-supplier-payments</span>
+        <span class="uc-sop">manage-supplier-payments</span>
+        <span class="uc-score">72</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$369K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">4.2mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$130K</span></span>
+        <span class="m"><span>duration</span><span class="v">16w</span></span>
+        <span class="chip high" style="margin-left:.25rem">High</span>
+        <span class="chip neutral">Validator</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When any supplier payment request is prepared, run automated 100% policy screening (supplier eligibility, approval authority, PO/contract, payment terms, duplicate, bank validation, DOA, spend-category) and flag violations.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 72 &gt;= 60 and technical_feasibility 52 &gt;= 50; achieves a mandatory control and large savings; human retains payment authority.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Incomplete rule coverage lets a non-compliant payment through</li><li>Dual-ERP (AX+D365) integration gaps during HERO migration</li><li>Change management across AP/Procurement/Compliance</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Complete policy ruleset</li><li>DOA matrix integration</li><li>Hard-stop on incomplete screening</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="invoice-processing"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#8</span>
+        <span class="uc-name" title="When a non-PO invoice is validated, route it to the correct business approver by cost center/amount/entity/DOA and check coding completeness.">invoice-processing</span>
+        <span class="uc-sop">invoice-processing</span>
+        <span class="uc-score">71</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$7K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">50.3mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$30K</span></span>
+        <span class="m"><span>duration</span><span class="v">6w</span></span>
+        <span class="chip low" style="margin-left:.25rem">Low</span>
+        <span class="chip neutral">Router</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a non-PO invoice is validated, route it to the correct business approver by cost center/amount/entity/DOA and check coding completeness.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 71 and feasibility 55 meet GO thresholds, but the manual-subset labour ROI is negative (3yr -$8.5K). Value is cycle-time/FPY across the full non-PO population; proceed only bundled into the shared Workflow Orchestration platform service where marginal cost is low, not as a standalone build.</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Standalone labour ROI negative on the manual subset; economically viable only as part of the shared Workflow Orchestration platform service</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Misrouting to wrong/lapsed approver</li><li>Delegation not maintained during leave</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Shared workflow platform</li><li>Active DOA/delegation data</li><li>Auto-escalation</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="travel-expense-claims"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#9</span>
+        <span class="uc-name" title="When a claim is submitted, run a risk-based compliance audit across 100% of claims (duplicate, policy limit, receipt, coding, tax, attendee, threshold-gaming) and score audit risk.">travel-expense-claims</span>
+        <span class="uc-sop">travel-expense-claims</span>
+        <span class="uc-score">71</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$510K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">2.8mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$120K</span></span>
+        <span class="m"><span>duration</span><span class="v">16w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Validator</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a claim is submitted, run a risk-based compliance audit across 100% of claims (duplicate, policy limit, receipt, coding, tax, attendee, threshold-gaming) and score audit risk.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 71 &gt;= 60 and technical_feasibility 55 &gt;= 50; flagship value - both largest savings and largest risk reduction. Human retains approval decision.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>False negatives let non-compliant claims through</li><li>Risk-scoring model bias against travel-heavy roles</li><li>Data quality of historical claims weakens scoring</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Concur audit-rule configuration</li><li>Explainable risk scoring</li><li>Human approval retained</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="vendor-helpdesk"
+        data-phase="4" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#10</span>
+        <span class="uc-name" title="When recurring inquiry themes emerge, aggregate ticket data to produce root-cause analytics and KPI/SLA dashboards for continuous improvement.">vendor-helpdesk</span>
+        <span class="uc-sop">vendor-helpdesk</span>
+        <span class="uc-score">71</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$8K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">61.9mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$40K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        
+        
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When recurring inquiry themes emerge, aggregate ticket data to produce root-cause analytics and KPI/SLA dashboards for continuous improvement.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 71 but negative 3yr labour ROI; value is decision-support/shared platform not standalone FTE. Proceed only as part of the shared Fabric reporting platform (S09) rather than a standalone helpdesk build.</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Requires the shared Microsoft Fabric analytics platform to be established (cross-SOP dependency)</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Data quality across ServiceNow/D365/Coupa undermines dashboards</li><li>Change management: reports not acted upon</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Shared Fabric data foundation</li><li>Root-cause tagging discipline</li><li>Governance cadence to act on insights</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="invoice-processing"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#11</span>
+        <span class="uc-name" title="When an invoice is captured, run duplicate detection across supplier/invoice#/date/amount/PO/currency against posted, parked, blocked and paid invoices.">invoice-processing</span>
+        <span class="uc-sop">invoice-processing</span>
+        <span class="uc-score">70</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$10K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">28.9mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$24K</span></span>
+        <span class="m"><span>duration</span><span class="v">4w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Validator</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When an invoice is captured, run duplicate detection across supplier/invoice#/date/amount/PO/currency against posted, parked, blocked and paid invoices.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 70 &gt;= 60 and technical_feasibility 58 &gt;= 50; despite modest manual-subset labour ROI, it is a mandatory control and consolidates with Supplier Payments at low marginal cost.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Near-duplicate false negatives</li><li>Fragmented builds vs Supplier Payments</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Shared canonical duplicate agent</li><li>ERP history access</li><li>Override audit trail</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="manage-supplier-payments"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#12</span>
+        <span class="uc-name" title="When invoices are captured, run automated duplicate-invoice detection across supplier/invoice#/date/amount/PO/currency against posted, parked, blocked and paid invoices.">manage-supplier-payments</span>
+        <span class="uc-sop">manage-supplier-payments</span>
+        <span class="uc-score">70</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$101K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">5.7mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$48K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Validator</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When invoices are captured, run automated duplicate-invoice detection across supplier/invoice#/date/amount/PO/currency against posted, parked, blocked and paid invoices.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 70 &gt;= 60 and technical_feasibility 58 &gt;= 50; high volume, mandatory control, fast payback.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Near-duplicate false negatives</li><li>False positives block legitimate invoices</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>ERP history access</li><li>Fuzzy near-duplicate matching</li><li>Override audit trail</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="invoice-processing"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#13</span>
+        <span class="uc-name" title="When a PO-backed invoice is captured, perform automated 2-way/3-way matching against PO and goods/service receipt within tolerance, holding exceptions.">invoice-processing</span>
+        <span class="uc-sop">invoice-processing</span>
+        <span class="uc-score">69</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$21K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">23.2mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$40K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Validator</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a PO-backed invoice is captured, perform automated 2-way/3-way matching against PO and goods/service receipt within tolerance, holding exceptions.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 69 &gt;= 60 and technical_feasibility 55 &gt;= 50; strategic FPY/touchless driver; consolidate with Supplier Payments PO-match to amortize cost.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Forced matches to clear exceptions</li><li>Missing GR blocks legitimate invoices</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Shared canonical PO-match agent</li><li>Coupa data quality</li><li>Tolerance config</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="invoice-processing"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#14</span>
+        <span class="uc-name" title="When invoices are captured, validate supplier master and detect supplier/format issues, auto-suggesting corrections and routing supplier-master exceptions.">invoice-processing</span>
+        <span class="uc-sop">invoice-processing</span>
+        <span class="uc-score">68</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$12K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">31.0mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$30K</span></span>
+        <span class="m"><span>duration</span><span class="v">6w</span></span>
+        <span class="chip low" style="margin-left:.25rem">Low</span>
+        <span class="chip neutral">Validator</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When invoices are captured, validate supplier master and detect supplier/format issues, auto-suggesting corrections and routing supplier-master exceptions.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 68 &gt;= 60 and technical_feasibility 58 &gt;= 50; native capability, reduces a named root cause; modest but positive 3yr value with population scaling.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Fuzzy match links to wrong supplier</li><li>Bank detail inferred from invoice</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Master-data quality</li><li>Confidence-based matching</li><li>No autonomous master change</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="invoice-processing"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#15</span>
+        <span class="uc-name" title="When exceptions occur, classify by reason code (EX001-EX024), assign owner/SLA, route with resolution guidance, and drive root-cause analytics.">invoice-processing</span>
+        <span class="uc-sop">invoice-processing</span>
+        <span class="uc-score">68</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$29K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">18.9mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$46K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Router</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When exceptions occur, classify by reason code (EX001-EX024), assign owner/SLA, route with resolution guidance, and drive root-cause analytics.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 68 &gt;= 60 and technical_feasibility 55 &gt;= 50; central to the SOP's improvement plan; consolidates with Supplier Payments exception routing.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Misclassification routes to wrong owner</li><li>Root-cause insights not acted upon</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Reason-code taxonomy config</li><li>Root-cause analytics on Fabric</li><li>Governance to act on insights</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="manage-supplier-payments"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#16</span>
+        <span class="uc-name" title="When a PO-backed invoice is captured, perform automated 2-way/3-way match against PO and goods/service receipt within tolerance.">manage-supplier-payments</span>
+        <span class="uc-sop">manage-supplier-payments</span>
+        <span class="uc-score">68</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$131K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">5.3mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$58K</span></span>
+        <span class="m"><span>duration</span><span class="v">10w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Validator</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a PO-backed invoice is captured, perform automated 2-way/3-way match against PO and goods/service receipt within tolerance.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 68 &gt;= 60 and technical_feasibility 55 &gt;= 50; high volume, explicit rules, strong payback. Consolidate with Invoice Processing PO-match.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Forced matches to clear exceptions</li><li>Missing goods receipt blocks legitimate invoices</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Coupa PO/receipt data</li><li>Tolerance config</li><li>No forced matches</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="travel-expense-claims"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#17</span>
+        <span class="uc-name" title="When approved claims are extracted for posting, validate coding/master-data/tax/currency and detect posting-failure conditions before Concur-to-AX transfer, reconciling batches.">travel-expense-claims</span>
+        <span class="uc-sop">travel-expense-claims</span>
+        <span class="uc-score">68</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$188K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">7.0mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$110K</span></span>
+        <span class="m"><span>duration</span><span class="v">16w</span></span>
+        <span class="chip high" style="margin-left:.25rem">High</span>
+        <span class="chip neutral">Validator</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When approved claims are extracted for posting, validate coding/master-data/tax/currency and detect posting-failure conditions before Concur-to-AX transfer, reconciling batches.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 68 &gt;= 60 and technical_feasibility 50 &gt;= 50; strong ROI though dual-ERP migration must be sequenced.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>HERO/D365 migration invalidates AX integration mid-build</li><li>Master-data errors cause validation false positives</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Dual-ERP integration design</li><li>Master-data validity</li><li>Batch reconciliation logic</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="vendor-helpdesk"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#18</span>
+        <span class="uc-name" title="When verified status is available and the case is low-risk, draft a grounded, multilingual vendor response from approved templates for agent review before sending.">vendor-helpdesk</span>
+        <span class="uc-sop">vendor-helpdesk</span>
+        <span class="uc-score">68</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$76K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">8.5mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$54K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When verified status is available and the case is low-risk, draft a grounded, multilingual vendor response from approved templates for agent review before sending.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 68 &gt;= 60 and technical_feasibility 58 &gt;= 50; grounded copilot drafting with mandatory human review keeps risk controlled.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>LLM hallucination of status not in verified data</li><li>Off-brand or culturally inappropriate tone in APAC languages</li><li>Unauthorized commitment language slips into draft</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Strict grounding to verified data</li><li>Forbidden-phrase filter for commitments</li><li>Bilingual review path for sensitive cases</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="invoice-processing"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#19</span>
+        <span class="uc-name" title="When an invoice is received, capture the image and extract header/line data via OCR, validating fields and routing low-confidence extractions to AP.">invoice-processing</span>
+        <span class="uc-sop">invoice-processing</span>
+        <span class="uc-score">67</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$95K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">8.8mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$70K</span></span>
+        <span class="m"><span>duration</span><span class="v">12w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When an invoice is received, capture the image and extract header/line data via OCR, validating fields and routing low-confidence extractions to AP.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 67 &gt;= 60 and technical_feasibility 55 &gt;= 50; core touchless enabler with clear strategic mandate.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>OCR failure on SEAA/local-format invoices</li><li>AI-OCR procurement/approval delay</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>AI-OCR capability</li><li>Supplier format enablement</li><li>Confidence-based AP verification</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="manage-supplier-payments"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#20</span>
+        <span class="uc-name" title="When exceptions arise, classify by category (14 types), assign owner and SLA, and route with a resolution packet; monitor aging.">manage-supplier-payments</span>
+        <span class="uc-sop">manage-supplier-payments</span>
+        <span class="uc-score">67</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$96K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">5.5mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$44K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Router</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When exceptions arise, classify by category (14 types), assign owner and SLA, and route with a resolution packet; monitor aging.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 67 &gt;= 60 and technical_feasibility 55 &gt;= 50; explicit taxonomy, high volume, fast payback.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Misclassification routes to wrong owner</li><li>Sanctions/fraud exception deferred instead of blocked</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Exception taxonomy config</li><li>Assignment groups</li><li>Sanctions hard-block rule</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="travel-expense-claims"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#21</span>
+        <span class="uc-name" title="When corporate card transactions and receipts exist, auto-match card lines to receipts and to expense claims, flagging unmatched/unreconciled items.">travel-expense-claims</span>
+        <span class="uc-sop">travel-expense-claims</span>
+        <span class="uc-score">67</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$208K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">3.5mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$60K</span></span>
+        <span class="m"><span>duration</span><span class="v">10w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When corporate card transactions and receipts exist, auto-match card lines to receipts and to expense claims, flagging unmatched/unreconciled items.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 67 &gt;= 60 and technical_feasibility 58 &gt;= 50; strong volume-driven ROI, fast payback.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Mismatches on partial/split transactions</li><li>Personal expense misclassification</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Card feed integration</li><li>Confidence-based matching</li><li>Personal-expense flagging</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="manage-supplier-payments"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#22</span>
+        <span class="uc-name" title="When a supplier or payment is screened, automatically screen against sanctions and restricted-party lists and detect fraud red flags (bank substitution, personal account, country mismatch, split invoices).">manage-supplier-payments</span>
+        <span class="uc-sop">manage-supplier-payments</span>
+        <span class="uc-score">66</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$169K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">6.8mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$96K</span></span>
+        <span class="m"><span>duration</span><span class="v">16w</span></span>
+        <span class="chip high" style="margin-left:.25rem">High</span>
+        <span class="chip neutral">Validator</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a supplier or payment is screened, automatically screen against sanctions and restricted-party lists and detect fraud red flags (bank substitution, personal account, country mismatch, split invoices).</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 66 and feasibility 50 meet GO thresholds, BUT the SOP states SisID/Oversight are only planned for Asia and not yet live; the sanctions/fraud tooling dependency is a blocking condition. Proceed once the fraud-screening platform is provisioned.</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">SisID and Oversight fraud-screening tools are planned but not yet implemented in Asia; sanctions screening service must be provisioned and Chanel TECH-approved</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>False negative allows sanctioned-party payment</li><li>SisID/Oversight rollout delay stalls the agent</li><li>Screening false positives delay legitimate payments</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>SisID/Oversight provisioning</li><li>Sanctions feed</li><li>Hard-block on match</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="manage-supplier-payments"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#23</span>
+        <span class="uc-name" title="When bank statements and payments are available, reconcile payments to statements and clear paid invoices in the ERP, flagging unmatched/returned payments.">manage-supplier-payments</span>
+        <span class="uc-sop">manage-supplier-payments</span>
+        <span class="uc-score">66</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$47K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">14.8mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$58K</span></span>
+        <span class="m"><span>duration</span><span class="v">10w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When bank statements and payments are available, reconcile payments to statements and clear paid invoices in the ERP, flagging unmatched/returned payments.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 66 &gt;= 60 and technical_feasibility 52 &gt;= 50; removes manual Excel recon, solid payback, improves close.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Multi-bank/currency mismatches</li><li>Returned-payment mis-handling</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Bank feed + ARCS integration</li><li>Currency normalization</li><li>Independent review of reconciliation</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="travel-expense-claims"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#24</span>
+        <span class="uc-name" title="When a receipt image is attached in Concur, extract line items (supplier, date, amount, tax, category) via OCR and pre-populate/validate the expense fields.">travel-expense-claims</span>
+        <span class="uc-sop">travel-expense-claims</span>
+        <span class="uc-score">66</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$256K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">3.2mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$68K</span></span>
+        <span class="m"><span>duration</span><span class="v">10w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a receipt image is attached in Concur, extract line items (supplier, date, amount, tax, category) via OCR and pre-populate/validate the expense fields.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 66 &gt;= 60 and technical_feasibility 55 &gt;= 50; huge volume, fast payback, native Concur fit.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>OCR errors on poor-quality/foreign receipts</li><li>Change management: employees distrust pre-fill</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>OCR accuracy on hotel folios/FX</li><li>Confidence-based human verification</li><li>Concur API access</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="invoice-processing"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#25</span>
+        <span class="uc-name" title="When a supplier or business user asks about invoice/payment status, provide grounded self-service answers via ServiceNow, escalating unresolved cases.">invoice-processing</span>
+        <span class="uc-sop">invoice-processing</span>
+        <span class="uc-score">65</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$34K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">10.7mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$30K</span></span>
+        <span class="m"><span>duration</span><span class="v">5w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a supplier or business user asks about invoice/payment status, provide grounded self-service answers via ServiceNow, escalating unresolved cases.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 65 &gt;= 60 and technical_feasibility 56 &gt;= 50; low marginal cost via consolidation with Vendor Helpdesk and Supplier Payments inquiry agents.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Over-disclosure of confidential status detail</li><li>Triplicated build across three SOPs</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Shared canonical inquiry agent</li><li>Grounding + citation</li><li>Escalation to human</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="travel-expense-claims"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#26</span>
+        <span class="uc-name" title="When claims require GL/cost-center/tax coding, suggest correct coding and expense type from claim context and history for employee/approver confirmation.">travel-expense-claims</span>
+        <span class="uc-sop">travel-expense-claims</span>
+        <span class="uc-score">65</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$101K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">6.2mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$52K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When claims require GL/cost-center/tax coding, suggest correct coding and expense type from claim context and history for employee/approver confirmation.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 65 &gt;= 60 and technical_feasibility 55 &gt;= 50; high volume, 6-month payback, reduces returns.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Incorrect suggestions propagate miscoding</li><li>Master-data changes stale the model</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Clean master data</li><li>Human confirmation</li><li>Historical coding data</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="vendor-helpdesk"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#27</span>
+        <span class="uc-name" title="When incoming email exhibits fraud indicators (urgent bank change, spoofed domain, personal email, pressure tactics), flag as suspicious, block auto-processing and escalate to Compliance.">vendor-helpdesk</span>
+        <span class="uc-sop">vendor-helpdesk</span>
+        <span class="uc-score">65</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$27K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">20.2mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$46K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Validator</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When incoming email exhibits fraud indicators (urgent bank change, spoofed domain, personal email, pressure tactics), flag as suspicious, block auto-processing and escalate to Compliance.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 65 &gt;= 60 and technical_feasibility 55 &gt;= 50; risk-mitigation value is the decisive factor; agent only flags/escalates, never acts.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>False negative lets a genuine fraud through</li><li>False positives frustrate legitimate vendors</li><li>Data privacy in analyzing email headers</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Recall-biased thresholds</li><li>Vendor master domain reference feed</li><li>Never-process-bank-change enforcement</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="invoice-processing"
+        data-phase="4" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#28</span>
+        <span class="uc-name" title="When an invoice is ready, validate tax treatment (VAT/GST/withholding/reverse-charge/e-invoicing) against supplier/entity/place-of-supply rules and flag non-compliance.">invoice-processing</span>
+        <span class="uc-sop">invoice-processing</span>
+        <span class="uc-score">64</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$21K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">38.3mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$66K</span></span>
+        <span class="m"><span>duration</span><span class="v">12w</span></span>
+        <span class="chip high" style="margin-left:.25rem">High</span>
+        <span class="chip neutral">Validator</span>
+        
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When an invoice is ready, validate tax treatment (VAT/GST/withholding/reverse-charge/e-invoicing) against supplier/entity/place-of-supply rules and flag non-compliance.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 64 but feasibility 50 at the boundary AND negative manual-subset labour ROI plus a tax-engine/multi-jurisdiction dependency. Value is compliance-driven; proceed bundled with a tax-rules platform capability, not as a standalone manual-subset build.</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Requires a governed multi-jurisdiction tax-rule engine/library and Tax Team validation; standalone manual-subset ROI is negative</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Incorrect tax determination causes compliance exposure</li><li>Evolving e-invoicing mandates outpace rules</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Governed tax-rule engine</li><li>Tax Team validation</li><li>Multi-jurisdiction data</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="manage-supplier-payments"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#29</span>
+        <span class="uc-name" title="When a supplier inquiry is received, provide self-service status (invoice receipt, payment status, remittance, dispute) grounded in ERP/Coupa via ServiceNow.">manage-supplier-payments</span>
+        <span class="uc-sop">manage-supplier-payments</span>
+        <span class="uc-score">64</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$58K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">8.3mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$40K</span></span>
+        <span class="m"><span>duration</span><span class="v">6w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a supplier inquiry is received, provide self-service status (invoice receipt, payment status, remittance, dispute) grounded in ERP/Coupa via ServiceNow.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 64 &gt;= 60 and technical_feasibility 55 &gt;= 50; low marginal cost by reusing the Vendor Helpdesk status/response agents.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Over-disclosure of confidential payment/bank data</li><li>Duplicated build vs Vendor Helpdesk</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Reuse Vendor Helpdesk agents</li><li>Minimum-necessary disclosure</li><li>Escalation to human on disputes</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="travel-expense-claims"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#30</span>
+        <span class="uc-name" title="When an employee needs guidance or claim status, provide a governed Copilot self-service assistant answering policy/procedure and status questions and triaging exceptions.">travel-expense-claims</span>
+        <span class="uc-sop">travel-expense-claims</span>
+        <span class="uc-score">64</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$104K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">6.0mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$52K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Analyzer</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When an employee needs guidance or claim status, provide a governed Copilot self-service assistant answering policy/procedure and status questions and triaging exceptions.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 64 &gt;= 60 and technical_feasibility 55 &gt;= 50; strong deflection value, mature Copilot fit, 6-month payback.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Hallucinated policy answers</li><li>Low employee adoption</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Governed policy KB</li><li>Grounding + citation</li><li>Escalation to human</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="manage-supplier-payments"
+        data-phase="4" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#31</span>
+        <span class="uc-name" title="When a payment run is proposed, detect anomalies (unusual amounts, new suppliers, recently changed banks, off-cycle patterns, negative balances) for review before release.">manage-supplier-payments</span>
+        <span class="uc-sop">manage-supplier-payments</span>
+        <span class="uc-score">63</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$32K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">26.7mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$72K</span></span>
+        <span class="m"><span>duration</span><span class="v">12w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Monitor</span>
+        
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a payment run is proposed, detect anomalies (unusual amounts, new suppliers, recently changed banks, off-cycle patterns, negative balances) for review before release.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 63 and feasibility 52 meet thresholds, but weak standalone labour ROI (26.7-mo payback) and dependency on the shared Biarritz ML platform make it a bundled, risk-driven build rather than a standalone one.</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Requires shared Biarritz ML-serving platform + Responsible AI approval; overlaps UC-02 fraud screening</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Anomaly false positives delay payment runs</li><li>Model misses novel fraud patterns</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Shared Biarritz ML platform</li><li>Explainable anomaly scoring</li><li>Fast human review lane</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="vendor-helpdesk"
+        data-phase="3" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#32</span>
+        <span class="uc-name" title="When a case matches escalation criteria (fraud, bank change, overdue-blocked, PO amendment, legal), route it to the correct internal team with a structured escalation packet.">vendor-helpdesk</span>
+        <span class="uc-sop">vendor-helpdesk</span>
+        <span class="uc-score">63</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$32K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">15.9mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$42K</span></span>
+        <span class="m"><span>duration</span><span class="v">8w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Router</span>
+        <span class="chip phase3">Phase 3</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When a case matches escalation criteria (fraud, bank change, overdue-blocked, PO amendment, legal), route it to the correct internal team with a structured escalation packet.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 63 &gt;= 60 and technical_feasibility 50 &gt;= 50; explicit routing matrix, human owner retained.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Misrouting a complex multi-team case</li><li>Escalation packet omits required evidence</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Accurate escalation-criteria detection</li><li>Complete packet assembly</li><li>Assignment-group config</li></ul></div>
+      </div></div>
+    </div><div class="uc-card cond" data-dec="cond" data-sop="travel-expense-claims"
+        data-phase="4" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#33</span>
+        <span class="uc-name" title="When claims are processed, monitor exception trends by employee/approver/department/merchant to surface fraud indicators and threshold-gaming patterns.">travel-expense-claims</span>
+        <span class="uc-sop">travel-expense-claims</span>
+        <span class="uc-score">62</span>
+        <span class="chip cond" style="flex-shrink:0">CONDITIONAL</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$14K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">76.6mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$88K</span></span>
+        <span class="m"><span>duration</span><span class="v">16w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Monitor</span>
+        
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When claims are processed, monitor exception trends by employee/approver/department/merchant to surface fraud indicators and threshold-gaming patterns.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 62 but negative standalone labour ROI and depends on the shared Biarritz ML + Fabric platform. Value is fraud-avoidance, not FTE; proceed only bundled with the shared ML-serving/analytics platform and after Responsible AI approval.</div></div>
+        <div class="db"><div class="db-h">Blocking Condition</div>
+          <div class="db-v" style="color:var(--blue)">Requires shared Biarritz ML-serving + Fabric analytics platform and Responsible AI approval</div></div>
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Model false positives burden audit team</li><li>Insufficient labelled fraud data</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Shared Fabric+Biarritz platform</li><li>Explainable models</li><li>Human investigation workflow</li></ul></div>
+      </div></div>
+    </div><div class="uc-card go" data-dec="go" data-sop="manage-supplier-payments"
+        data-phase="2" onclick="toggleUC(this)">
+      <div class="uc-r1">
+        <span class="uc-rank">#34</span>
+        <span class="uc-name" title="When new or changed supplier bank details are submitted, orchestrate independent verification (call-back, bank document, dual approval) before any payment, blocking unverified changes.">manage-supplier-payments</span>
+        <span class="uc-sop">manage-supplier-payments</span>
+        <span class="uc-score">61</span>
+        <span class="chip go" style="flex-shrink:0">GO</span>
+      </div>
+      <div class="uc-r2">
+        <span class="m pos"><span>savings</span><span class="v">$104K/yr</span></span>
+        <span class="m warn"><span>payback</span><span class="v">6.7mo</span></span>
+        <span class="m"><span>impl cost</span><span class="v">$58K</span></span>
+        <span class="m"><span>duration</span><span class="v">10w</span></span>
+        <span class="chip medium" style="margin-left:.25rem">Medium</span>
+        <span class="chip neutral">Orchestrator</span>
+        <span class="chip phase2">Phase 2</span>
+      </div>
+      <div class="uc-detail">
+      <div class="uc-dg">
+        <div class="db"><div class="db-h">Use Case</div>
+          <div class="db-v">When new or changed supplier bank details are submitted, orchestrate independent verification (call-back, bank document, dual approval) before any payment, blocking unverified changes.</div></div>
+        <div class="db"><div class="db-h">Justification</div>
+          <div class="db-v">automation_score 61 &gt;= 60 and technical_feasibility 52 &gt;= 50; enforces a mandatory control while orchestrating human verification; strong risk value.</div></div>
+        
+        <div class="db"><div class="db-h">Top Risks</div><ul>
+          <li>Orchestrator applies change before verification completes</li><li>Verification bypassed under urgency pressure</li></ul></div>
+        <div class="db"><div class="db-h">Critical Success Factors</div><ul>
+          <li>Hard block until verified</li><li>Dual-approval enforcement</li><li>Independent contact source</li></ul></div>
+      </div></div>
+    </div></div>
+</div></div>
+  <div class="section" id="sec-clusters"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Cross-SOP Clusters</div>
+      <h2 class="sec-h">Portfolio <strong>Clusters</strong></h2>
+      <p class="sec-sub">Use cases grouped across SOPs by category — identifying shared platform service opportunities.</p>
+    </div>
+    <div class="cluster-grid">
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C09</span>
+        <span class="cluster-name" title="Reconciliation &amp; Verification">Reconciliation &amp; Verification</span>
+        <span class="chip medium">Medium</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">8</span>Use Cases</div>
+        <div><span class="csv">3</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Matching, verifying and correcting records across systems: PO 2/3-way matching, duplicate detection, corporate-card reconciliation, Concur-to-AX posting validation, and bank/payment reconciliation.</div>
+      <div class="cluster-sops"><span class="sop-tag">Travel &amp; Expense Claims Processing</span><span class="sop-tag">Managing Supplier Payments</span><span class="sop-tag">Invoice Processing</span></div>
+      <div class="cluster-value">⬆ ~$319K/yr potential consolidation savings (30% efficiency from a shared matching/reconciliation service used across three SOPs)</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C05</span>
+        <span class="cluster-name" title="Compliance &amp; Regulatory">Compliance &amp; Regulatory</span>
+        <span class="chip high">High</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">5</span>Use Cases</div>
+        <div><span class="csv">4</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Monitoring, flagging and enforcing regulatory/policy compliance: 100% payment policy screening, sanctions/fraud red-flag screening, T&amp;E compliance audit, tax validation, and vendor-helpdesk fraud screening.</div>
+      <div class="cluster-sops"><span class="sop-tag">Vendor Helpdesk Operations</span><span class="sop-tag">Travel &amp; Expense Claims Processing</span><span class="sop-tag">Managing Supplier Payments</span><span class="sop-tag">Invoice Processing</span></div>
+      <div class="cluster-value">⬆ ~$264K/yr potential consolidation savings (shared screening/risk-scoring service across all four SOPs)</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C08</span>
+        <span class="cluster-name" title="Exception Management">Exception Management</span>
+        <span class="chip medium">Medium</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">4</span>Use Cases</div>
+        <div><span class="csv">3</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Detecting, classifying, routing and resolving anomalies: payment/invoice exception routing, bank-change verification orchestration, and escalation routing.</div>
+      <div class="cluster-sops"><span class="sop-tag">Vendor Helpdesk Operations</span><span class="sop-tag">Managing Supplier Payments</span><span class="sop-tag">Invoice Processing</span></div>
+      <div class="cluster-value">⬆ ~$65K/yr potential consolidation savings (shared exception/routing service on ServiceNow)</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C10</span>
+        <span class="cluster-name" title="Knowledge Synthesis">Knowledge Synthesis</span>
+        <span class="chip medium">Medium</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">5</span>Use Cases</div>
+        <div><span class="csv">4</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Aggregating and summarizing system data for human consumption: grounded status retrieval, response drafting, and supplier/employee self-service inquiry across ERP/Coupa/ServiceNow.</div>
+      <div class="cluster-sops"><span class="sop-tag">Vendor Helpdesk Operations</span><span class="sop-tag">Travel &amp; Expense Claims Processing</span><span class="sop-tag">Managing Supplier Payments</span><span class="sop-tag">Invoice Processing</span></div>
+      <div class="cluster-value">⬆ ~$205K/yr potential consolidation savings (one shared status/inquiry copilot across all four SOPs)</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C07</span>
+        <span class="cluster-name" title="Document Processing">Document Processing</span>
+        <span class="chip medium">Medium</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">3</span>Use Cases</div>
+        <div><span class="csv">3</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Extracting/classifying content from unstructured documents: email triage/extraction, receipt OCR, and invoice OCR capture.</div>
+      <div class="cluster-sops"><span class="sop-tag">Vendor Helpdesk Operations</span><span class="sop-tag">Travel &amp; Expense Claims Processing</span><span class="sop-tag">Invoice Processing</span></div>
+      <div class="cluster-value">⬆ ~$134K/yr potential consolidation savings (shared document-ingestion/OCR service)</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C06</span>
+        <span class="cluster-name" title="Monitoring &amp; Alerting">Monitoring &amp; Alerting</span>
+        <span class="chip medium">Medium</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">4</span>Use Cases</div>
+        <div><span class="csv">3</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Event/threshold-triggered watching: SLA monitoring, aging-claim monitoring, exception-trend/fraud monitoring, and payment-run anomaly detection.</div>
+      <div class="cluster-sops"><span class="sop-tag">Vendor Helpdesk Operations</span><span class="sop-tag">Travel &amp; Expense Claims Processing</span><span class="sop-tag">Managing Supplier Payments</span></div>
+      <div class="cluster-value">⬆ ~$36K/yr potential consolidation savings (shared monitoring/alerting service)</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C11</span>
+        <span class="cluster-name" title="Reporting &amp; Analytics">Reporting &amp; Analytics</span>
+        <span class="chip medium">Medium</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">2</span>Use Cases</div>
+        <div><span class="csv">2</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Generating governed dashboards and audit trails on Microsoft Fabric: helpdesk root-cause/KPI reporting and invoice touchless/FPY/exception-aging dashboards.</div>
+      <div class="cluster-sops"><span class="sop-tag">Vendor Helpdesk Operations</span><span class="sop-tag">Invoice Processing</span></div>
+      <div class="cluster-value">⬆ ~$10K/yr potential consolidation savings (shared Fabric reporting foundation; primary value is decision-support, not FTE)</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C02</span>
+        <span class="cluster-name" title="Case Orchestration">Case Orchestration</span>
+        <span class="chip low">Low</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">1</span>Use Cases</div>
+        <div><span class="csv">1</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Managing case lifecycle: ServiceNow ticket creation/update/closure with mandatory fields and audit notes.</div>
+      <div class="cluster-sops"><span class="sop-tag">Vendor Helpdesk Operations</span></div>
+      <div class="cluster-value">⬆ ~$15K/yr potential consolidation savings (shared ServiceNow case layer underpinning C08/C10)</div>
+    </div>
+    <div class="cluster-card">
+      <div class="cluster-head">
+        <span class="cluster-id">C01</span>
+        <span class="cluster-name" title="Workflow Automation">Workflow Automation</span>
+        <span class="chip low">Low</span>
+      </div>
+      <div class="cluster-stats">
+        <div><span class="csv">1</span>Use Cases</div>
+        <div><span class="csv">1</span>SOPs</div>
+      </div>
+      <div class="cluster-desc">Routing/sequencing multi-step process flows: non-PO invoice approval routing.</div>
+      <div class="cluster-sops"><span class="sop-tag">Invoice Processing</span></div>
+      <div class="cluster-value">⬆ ~$4K/yr direct; primary value is shared workflow-orchestration leverage across exception and approval routing</div>
+    </div></div>
+    
+    <h3 style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.75rem;font-weight:700;text-transform:uppercase;
+        letter-spacing:.08em;color:var(--tpl);margin:2rem 0 .75rem;display:flex;align-items:center;gap:.5rem">
+      <span style="width:3px;height:10px;background:var(--purple);display:inline-block;border-radius:1px"></span>
+      Platform Services</h3>
+    <div style="overflow-x:auto">
+    <table class="svcs-table">
+      <thead><tr>
+        <th>ID</th><th>Service</th><th>Responsibility</th><th>SOPs</th>
+        <th>Consol. Savings</th><th>Priority</th><th>Phase</th>
+      </tr></thead>
+      <tbody>
+    <tr>
+      <td><span class="svc-id">S01</span></td>
+      <td style="color:var(--tp);font-weight:600">Compliance &amp; Screening Service</td>
+      <td>Applies configurable rule packs and risk scoring (policy, sanctions, fraud, tax, T&amp;E audit) to any transaction and returns an explainable pass/hold/escalate decision with a violation list, always human-decided.</td>
+      <td><span class="sop-tag">Vendor Helpdesk Operations</span> <span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$152K</td>
+      <td><span class="pri-badge high">High</span></td>
+      <td><span class="chip phase1">Phase 1</span></td>
+    </tr>
+    <tr>
+      <td><span class="svc-id">S02</span></td>
+      <td style="color:var(--tp);font-weight:600">Reconciliation &amp; Matching Service</td>
+      <td>Fuzzy + rule-based matching of documents/records against reference data (PO, receipt, prior invoices, bank statements, master data) within tolerance, flagging exceptions for human resolution.</td>
+      <td><span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$125K</td>
+      <td><span class="pri-badge high">High</span></td>
+      <td><span class="chip phase1">Phase 1</span></td>
+    </tr>
+    <tr>
+      <td><span class="svc-id">S03</span></td>
+      <td style="color:var(--tp);font-weight:600">Status &amp; Inquiry Copilot Service</td>
+      <td>Grounded, multilingual status retrieval, response drafting and self-service inquiry across ERP/Coupa/Concur/ServiceNow, with strict grounding, minimum-necessary disclosure and human escalation.</td>
+      <td><span class="sop-tag">Vendor Helpdesk Operations</span> <span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$86K</td>
+      <td><span class="pri-badge high">High</span></td>
+      <td><span class="chip phase1">Phase 1</span></td>
+    </tr>
+    <tr>
+      <td><span class="svc-id">S04</span></td>
+      <td style="color:var(--tp);font-weight:600">Document Ingestion &amp; OCR Service</td>
+      <td>Captures and extracts structured, confidence-scored data from emails, receipts and invoices (Kofax/Tungsten + AI-OCR), routing low-confidence fields to humans.</td>
+      <td><span class="sop-tag">Vendor Helpdesk Operations</span> <span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Invoice Processing</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$59K</td>
+      <td><span class="pri-badge medium">Medium</span></td>
+      <td><span class="chip phase2">Phase 2</span></td>
+    </tr>
+    <tr>
+      <td><span class="svc-id">S05</span></td>
+      <td style="color:var(--tp);font-weight:600">Exception &amp; Workflow Orchestration Service</td>
+      <td>ServiceNow/Power Automate classify-route-track engine for exceptions and approvals: taxonomy classification, owner/SLA assignment, packet assembly, aging and auto-escalation.</td>
+      <td><span class="sop-tag">Vendor Helpdesk Operations</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$55K</td>
+      <td><span class="pri-badge medium">Medium</span></td>
+      <td><span class="chip phase2">Phase 2</span></td>
+    </tr>
+    <tr>
+      <td><span class="svc-id">S06</span></td>
+      <td style="color:var(--tp);font-weight:600">Data Integration &amp; API Gateway</td>
+      <td>Secure, governed connectors and API gateway across D365/AX, Coupa, Concur, Kofax, ServiceNow and bank portals under Chanel TECH governance, honouring the HERO dual-ERP transition matrix.</td>
+      <td><span class="sop-tag">Vendor Helpdesk Operations</span> <span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$36K</td>
+      <td><span class="pri-badge high">High</span></td>
+      <td><span class="chip phase1">Phase 1</span></td>
+    </tr>
+    <tr>
+      <td><span class="svc-id">S07</span></td>
+      <td style="color:var(--tp);font-weight:600">Monitoring &amp; Alerting Service</td>
+      <td>Rule-based (Power Automate) and ML-based (Fabric/Biarritz) monitoring of SLA clocks, aging thresholds and transaction anomalies, triggering reminders, escalations and anomaly alerts.</td>
+      <td><span class="sop-tag">Vendor Helpdesk Operations</span> <span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Managing Supplier Payments</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$19K</td>
+      <td><span class="pri-badge medium">Medium</span></td>
+      <td><span class="chip phase3">Phase 3</span></td>
+    </tr>
+    <tr>
+      <td><span class="svc-id">S08</span></td>
+      <td style="color:var(--tp);font-weight:600">Analytics, ML &amp; Reporting Platform</td>
+      <td>Governed Microsoft Fabric data foundation plus Biarritz ML-serving for KPI/SLA/aging/root-cause dashboards and anomaly/risk models across the S2P estate.</td>
+      <td><span class="sop-tag">Vendor Helpdesk Operations</span> <span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></td>
+      <td style="color:var(--green);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">$25K</td>
+      <td><span class="pri-badge medium">Medium</span></td>
+      <td><span class="chip phase3">Phase 3</span></td>
+    </tr></tbody>
+    </table></div>
+  </div></div>
+  <div class="section" id="sec-economics"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Portfolio Economics</div>
+      <h2 class="sec-h">Investment <strong>Economics</strong></h2>
+      <p class="sec-sub">Current per-SOP plan vs consolidated platform model — implementation cost, savings and payback.</p>
+    </div>
+    <div class="econ-kpis">
+      <div class="econ-kpi" style="border-left-color:var(--green)">
+        <div class="ev green">$3.0M</div>
+        <div class="el">Total Annual Savings (GO UCs)</div></div>
+      <div class="econ-kpi">
+        <div class="ev">$1.5M</div>
+        <div class="el">Per-SOP Impl. Cost (current)</div></div>
+      <div class="econ-kpi" style="border-left-color:var(--green)">
+        <div class="ev green">$1.1M</div>
+        <div class="el">Consolidated Impl. Cost</div></div>
+      <div class="econ-kpi" style="border-left-color:var(--blue)">
+        <div class="ev blue">6.3mo → 4.4mo</div>
+        <div class="el">Payback: Current → Consolidated</div></div>
+      <div class="econ-kpi" style="border-left-color:var(--teal)">
+        <div class="ev" style="color:var(--teal)">31.0</div>
+        <div class="el">FTE Reduction Estimate</div></div>
+      <div class="econ-kpi" style="border-left-color:var(--green)">
+        <div class="ev green">$7.8M</div>
+        <div class="el">3-Year Net Benefit (Consolidated)</div></div>
+    </div>
+
+    <div class="plan-compare">
+      <div class="plan-box current">
+        <div class="pb-lbl">Current Plan — Per-SOP</div>
+        <div class="pb-row"><span class="pk">Impl. Cost</span><span class="pv">$1.5M</span></div>
+        <div class="pb-row"><span class="pk">Annual Savings</span><span class="pv green">$3.0M</span></div>
+        <div class="pb-row"><span class="pk">Payback</span><span class="pv">6.3 months</span></div>
+      </div>
+      <div class="plan-arrow">
+        <div class="pa-sym">→</div>
+        <div class="pa-lbl">Save 30%<br>impl cost</div>
+      </div>
+      <div class="plan-box consolidated">
+        <div class="pb-lbl">Consolidated Platform</div>
+        <div class="pb-row"><span class="pk">Impl. Cost</span><span class="pv">$1.1M</span></div>
+        <div class="pb-row"><span class="pk">Annual Savings</span><span class="pv green">$3.0M</span></div>
+        <div class="pb-row"><span class="pk">Payback</span><span class="pv green">4.4 months (-1.9mo faster)</span></div>
+      </div>
+    </div>
+
+    <div class="bar-compare">
+      <div class="bc-title">Implementation Cost Comparison</div>
+      <div class="bar-row">
+        <div class="br-lbl">Per-SOP Plan</div>
+        <div class="br-track">
+          <div class="br-fill current" style="width:100.0%">
+            <span class="bv">$1.5M</span></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="br-lbl">Consolidated</div>
+        <div class="br-track">
+          <div class="br-fill consolidated" style="width:70.0%">
+            <span class="bv">$1.1M</span></div></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="section" id="sec-roadmap"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Implementation Roadmap</div>
+      <h2 class="sec-h">Phased <strong>Roadmap</strong></h2>
+      <p class="sec-sub">Three-phase delivery plan — foundation, expansion and optimisation — with cost, savings and critical path per phase.</p>
+    </div>
+    <div class="phase-cards">
+    <div class="phase-card" data-phase="1">
+      <div class="pc-head">
+        <span class="pc-num">Phase 1: Foundation + Highest-Value Pilots</span>
+        <span class="pc-range">Months 0-6</span>
+      </div>
+      <div class="pc-stats">
+        <div><div class="pcs-v">$930K</div><div class="pcs-l">Impl. Cost</div></div>
+        <div><div class="pcs-v" style="color:var(--green)">$1.6M</div>
+          <div class="pcs-l">Savings by End</div></div>
+      </div>
+      <div class="pc-lbl">Deliverables</div><ul><li>Data Integration &amp; API Gateway (S06)</li><li>Compliance &amp; Screening Service (S01) with T&amp;E audit + payment policy screening rule packs</li><li>Reconciliation &amp; Matching Service (S02) with PO-match + duplicate detection</li><li>Status &amp; Inquiry Copilot Service (S03) grounded status/response across Vendor Helpdesk</li><li>Bank-detail verification orchestrator (quick fraud win)</li></ul>
+      <div class="pc-lbl">Pilot SOPs</div><div class="pilot-tags"><span class="sop-tag">Travel &amp; Expense Claims Processing</span><span class="sop-tag">Managing Supplier Payments</span></div>
+      <div class="pc-lbl">Clusters in Phase</div><div style="display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.25rem"><span class="chip phase1">S06</span> <span class="chip phase1">S01</span> <span class="chip phase1">S02</span> <span class="chip phase1">S03</span></div>
+      <div class="pc-path">⚡ S06 gateway + entity system matrix -&gt; S01 screening (T&amp;E 100% audit, payment 100% policy screening) -&gt; S02 matching/duplicate -&gt; S03 copilot on Vendor Helpdesk</div>
+      <div class="pc-lbl">Dependencies</div><ul><li>Chanel TECH architecture/security approval</li><li>HERO dual-ERP entity matrix</li><li>Read access to D365/AX/Coupa/Concur</li></ul>
+      <div class="pc-lbl">Gating Decisions</div><ul><li>Responsible AI approval for screening/risk scoring</li><li>Confirm AX-vs-HERO source-of-truth per entity</li></ul>
+    </div>
+    <div class="phase-card" data-phase="2">
+      <div class="pc-head">
+        <span class="pc-num">Phase 2: Expansion: Capture, Exceptions &amp; Coding</span>
+        <span class="pc-range">Months 7-12</span>
+      </div>
+      <div class="pc-stats">
+        <div><div class="pcs-v">$266K</div><div class="pcs-l">Impl. Cost</div></div>
+        <div><div class="pcs-v" style="color:var(--green)">$2.6M</div>
+          <div class="pcs-l">Savings by End</div></div>
+      </div>
+      <div class="pc-lbl">Deliverables</div><ul><li>Document Ingestion &amp; OCR Service (S04) - receipt + invoice OCR to lift touchless 49%-&gt;65%</li><li>Exception &amp; Workflow Orchestration Service (S05) - EX-code + 14-category + escalation routing</li><li>Coding suggestion + supplier-master validation agents</li><li>Extend Status &amp; Inquiry Copilot to Supplier Payments + Invoice Processing</li></ul>
+      <div class="pc-lbl">Pilot SOPs</div><div class="pilot-tags"><span class="sop-tag">Invoice Processing</span><span class="sop-tag">Travel &amp; Expense Claims Processing</span></div>
+      <div class="pc-lbl">Clusters in Phase</div><div style="display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.25rem"><span class="chip phase2">S04</span> <span class="chip phase2">S05</span></div>
+      <div class="pc-path">⚡ AI-OCR selection (Chanel TECH) -&gt; S04 ingestion -&gt; S05 exception/workflow routing -&gt; canonical copilot extension</div>
+      <div class="pc-lbl">Dependencies</div><ul><li>AI-OCR procurement + Chanel TECH approval</li><li>S06 gateway live</li><li>ServiceNow Finance Operations capability</li></ul>
+      <div class="pc-lbl">Gating Decisions</div><ul><li>AI-OCR build-vs-buy</li><li>Supplier enablement plan for portal/e-invoicing</li></ul>
+    </div>
+    <div class="phase-card" data-phase="3">
+      <div class="pc-head">
+        <span class="pc-num">Phase 3: Optimisation: ML Monitoring, Analytics &amp; Conditional Agents</span>
+        <span class="pc-range">Months 13-18</span>
+      </div>
+      <div class="pc-stats">
+        <div><div class="pcs-v">$102K</div><div class="pcs-l">Impl. Cost</div></div>
+        <div><div class="pcs-v" style="color:var(--green)">$3.0M</div>
+          <div class="pcs-l">Savings by End</div></div>
+      </div>
+      <div class="pc-lbl">Deliverables</div><ul><li>Analytics, ML &amp; Reporting Platform (S08) - Fabric dashboards + Biarritz ML-serving</li><li>Monitoring &amp; Alerting Service (S07)</li><li>Sanctions/fraud screening + payment-run anomaly + T&amp;E exception-analytics (conditional agents once SisID/Oversight + ML platform live)</li><li>Multi-jurisdiction tax-validation agent</li></ul>
+      <div class="pc-lbl">Pilot SOPs</div><div class="pilot-tags"><span class="sop-tag">Managing Supplier Payments</span><span class="sop-tag">Invoice Processing</span></div>
+      <div class="pc-lbl">Clusters in Phase</div><div style="display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.25rem"><span class="chip phase3">S08</span> <span class="chip phase3">S07</span></div>
+      <div class="pc-path">⚡ Fabric data foundation + Biarritz ML-serving -&gt; S07 monitoring -&gt; unblock CONDITIONAL sanctions/anomaly/tax agents</div>
+      <div class="pc-lbl">Dependencies</div><ul><li>SisID/Oversight go-live in Asia</li><li>Biarritz ML platform provisioning</li><li>Responsible AI approval for ML models</li></ul>
+      <div class="pc-lbl">Gating Decisions</div><ul><li>Responsible AI sign-off on ML fraud/anomaly models</li><li>Tax-rules build-vs-buy</li></ul>
+    </div></div>
+    <div id="roadmap-chart" style="margin-top:1.5rem;background:var(--l01);border:1px solid var(--bs);padding:1.25rem">
+      <div class="section-eyebrow">Savings Realised by Phase-End</div>
+      <svg id="roadmap-svg" width="100%" height="120"></svg>
+    </div>
+  </div></div>
+  <div class="section" id="sec-heatmap"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Cross-SOP Heatmap</div>
+      <h2 class="sec-h">Cluster × SOP <strong>Heatmap</strong></h2>
+      <p class="sec-sub">GO use case count per cluster (row) per SOP (column). Darker cells = more approved automation.</p>
+    </div>
+    <div class="heatmap-wrap">
+      <svg id="hmap-svg"></svg>
+    </div>
+    <div class="hm-legend">
+      <span>0 GO UCs</span>
+      <span class="hml-grad"></span>
+      <span>Max GO UCs</span>
+    </div>
+  </div></div>
+  <div class="section" id="sec-agents"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Canonical Agents</div>
+      <h2 class="sec-h">Agent <strong>Consolidation</strong></h2>
+      <p class="sec-sub">Agent types that appear across multiple SOPs — consolidation candidates for shared deployment.</p>
+    </div>
+    <div class="agent-grid">
+    <div class="agent-card">
+      <div class="ag-head">
+        <span class="ag-id">A01</span>
+        <span class="ag-name">S2P Status &amp; Inquiry Copilot (Canonical Analyzer)</span>
+        <span class="ag-rec consolidate">Consolidate</span>
+      </div>
+      <div class="ar"><span class="ak">Role</span>Single grounded, multilingual status/inquiry copilot serving vendors, suppliers and employees across D365/AX/Coupa/Concur/ServiceNow with minimum-necessary disclosure and human escalation.</div>
+      <div class="ar"><span class="ak">SOPs</span><span style="display:flex;flex-wrap:wrap;gap:.25rem"><span class="sop-tag">Vendor Helpdesk Operations</span> <span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></span></div>
+      <div class="ar"><span class="ak">Varies by</span>Data source (D365/AX/Coupa/Concur), audience (vendor/supplier/employee), language set, and disclosure policy vary per SOP; core retrieve-ground-answer-escalate logic is identical.</div>
+      <div class="ar"><span class="ak">Instances</span>4 separate designs</div>
+      
+      <div class="ar"><span class="ak">Tools</span>
+        <div class="tool-tags"><span class="tool-tag">copilot_studio</span><span class="tool-tag">erp_api</span><span class="tool-tag">coupa_api</span><span class="tool-tag">servicenow_api</span></div></div>
+    </div>
+    <div class="agent-card">
+      <div class="ag-head">
+        <span class="ag-id">A02</span>
+        <span class="ag-name">S2P Reconciliation &amp; Matching Validator (Canonical)</span>
+        <span class="ag-rec consolidate">Consolidate</span>
+      </div>
+      <div class="ar"><span class="ak">Role</span>Single matching/reconciliation validator for PO 2/3-way matching, duplicate detection, card reconciliation and posting/payment reconciliation across the P2P estate.</div>
+      <div class="ar"><span class="ak">SOPs</span><span style="display:flex;flex-wrap:wrap;gap:.25rem"><span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></span></div>
+      <div class="ar"><span class="ak">Varies by</span>Reference data and tolerances vary (PO/receipt, invoice history, bank statements, master data); matching pattern and exception-hold logic are common.</div>
+      <div class="ar"><span class="ak">Instances</span>5 separate designs</div>
+      
+      <div class="ar"><span class="ak">Tools</span>
+        <div class="tool-tags"><span class="tool-tag">erp_api</span><span class="tool-tag">coupa_api</span><span class="tool-tag">matching_engine</span><span class="tool-tag">duplicate_detector</span></div></div>
+    </div>
+    <div class="agent-card">
+      <div class="ag-head">
+        <span class="ag-id">A03</span>
+        <span class="ag-name">S2P Compliance &amp; Screening Validator (Canonical)</span>
+        <span class="ag-rec consolidate">Consolidate</span>
+      </div>
+      <div class="ar"><span class="ak">Role</span>Single explainable screening validator applying per-domain rule packs (payment policy, T&amp;E audit, sanctions/fraud, tax) with human-in-loop decisions.</div>
+      <div class="ar"><span class="ak">SOPs</span><span style="display:flex;flex-wrap:wrap;gap:.25rem"><span class="sop-tag">Vendor Helpdesk Operations</span> <span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></span></div>
+      <div class="ar"><span class="ak">Varies by</span>Rule packs and lists differ per domain; the screen-flag-explain-escalate pattern and audit trail are common.</div>
+      <div class="ar"><span class="ak">Instances</span>5 separate designs</div>
+      
+      <div class="ar"><span class="ak">Tools</span>
+        <div class="tool-tags"><span class="tool-tag">erp_api</span><span class="tool-tag">coupa_api</span><span class="tool-tag">rules_engine</span><span class="tool-tag">risk_scorer</span></div></div>
+    </div>
+    <div class="agent-card">
+      <div class="ag-head">
+        <span class="ag-id">A04</span>
+        <span class="ag-name">S2P Exception &amp; Escalation Router (Canonical)</span>
+        <span class="ag-rec consolidate">Consolidate</span>
+      </div>
+      <div class="ar"><span class="ak">Role</span>Single ServiceNow-based router that classifies exceptions/escalations, assigns owner/SLA, assembles packets and tracks aging across helpdesk, payments and invoice processing.</div>
+      <div class="ar"><span class="ak">SOPs</span><span style="display:flex;flex-wrap:wrap;gap:.25rem"><span class="sop-tag">Vendor Helpdesk Operations</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></span></div>
+      <div class="ar"><span class="ak">Varies by</span>Taxonomies differ (escalation matrix, 14 payment categories, EX001-EX024); classify-route-SLA-aging engine is common.</div>
+      <div class="ar"><span class="ak">Instances</span>3 separate designs</div>
+      
+      <div class="ar"><span class="ak">Tools</span>
+        <div class="tool-tags"><span class="tool-tag">servicenow_api</span><span class="tool-tag">erp_api</span><span class="tool-tag">rules_engine</span></div></div>
+    </div>
+    <div class="agent-card">
+      <div class="ag-head">
+        <span class="ag-id">A05</span>
+        <span class="ag-name">S2P Document Ingestion Analyzer (Canonical)</span>
+        <span class="ag-rec consolidate">Consolidate</span>
+      </div>
+      <div class="ar"><span class="ak">Role</span>Single OCR/AI-extraction analyzer converting emails, receipts and invoices into structured, confidence-scored data with human verification.</div>
+      <div class="ar"><span class="ak">SOPs</span><span style="display:flex;flex-wrap:wrap;gap:.25rem"><span class="sop-tag">Vendor Helpdesk Operations</span> <span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Invoice Processing</span></span></div>
+      <div class="ar"><span class="ak">Varies by</span>Document types and target schemas differ (email/receipt/invoice); ingest-extract-classify-confidence-gate pattern is common.</div>
+      <div class="ar"><span class="ak">Instances</span>3 separate designs</div>
+      
+      <div class="ar"><span class="ak">Tools</span>
+        <div class="tool-tags"><span class="tool-tag">kofax_api</span><span class="tool-tag">ocr_engine</span><span class="tool-tag">expense_classifier</span><span class="tool-tag">entity_extractor</span></div></div>
+    </div></div>
+  </div></div>
+  <div class="section" id="sec-risks"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Portfolio Risk Register</div>
+      <h2 class="sec-h">Risk <strong>Register</strong></h2>
+      <p class="sec-sub">Cross-SOP portfolio-level risks — not duplicated from individual Wave 2 UC analyses.</p>
+    </div>
+    <div style="display:flex;gap:.375rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
+      <span class="fchip-lbl">Category</span>
+      <button class="fchip active" onclick="filterRisk()" data-cat="all">All</button>
+      <button class="fchip" onclick="filterRisk()" data-cat="Technical">Technical</button><button class="fchip" onclick="filterRisk()" data-cat="Regulatory">Regulatory</button><button class="fchip" onclick="filterRisk()" data-cat="Organizational">Organizational</button><button class="fchip" onclick="filterRisk()" data-cat="Operational">Operational</button>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="risk-table">
+        <thead><tr>
+          <th>ID</th><th>Risk</th><th>Category</th>
+          <th>Likelihood</th><th>Impact</th><th>Mitigation</th><th>Affects</th>
+        </tr></thead>
+        <tbody id="risk-tbody"><tr data-cat="Technical">
+      <td><span class="risk-id">R01</span></td>
+      <td style="max-width:280px">HERO/D365 migration runs concurrently with agent builds; shared integrations against a moving dual-ERP (AX V6 + D365) landscape create rework and source-of-truth ambiguity.</td>
+      <td><span class="risk-cat technical">Technical</span></td>
+      <td><span class="chip high">High</span></td>
+      <td><span class="chip high">High</span></td>
+      <td style="max-width:280px;font-size:.75rem">Build the Data Integration &amp; API Gateway (S06) first with an entity-by-entity system matrix; design all agents to the HERO global core model; time-box AX workarounds and reconcile at cutover.</td>
+      <td><div class="sops-inline"><span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></div></td>
+    </tr><tr data-cat="Regulatory">
+      <td><span class="risk-id">R02</span></td>
+      <td style="max-width:280px">Autonomous AI decision-making on payments, approvals, master-data or tax would breach mandatory controls and Responsible AI policy.</td>
+      <td><span class="risk-cat regulatory">Regulatory</span></td>
+      <td><span class="chip medium">Medium</span></td>
+      <td><span class="chip high">High</span></td>
+      <td style="max-width:280px;font-size:.75rem">Enforce human-in-loop on every payment/approval/master-data/tax decision (RED autonomy zone in all blueprints); route all screening/matching/anomaly outputs to human decision; obtain Responsible AI approval before deployment; maintain end-to-end audit logs.</td>
+      <td><div class="sops-inline"><span class="sop-tag">Vendor Helpdesk Operations</span> <span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></div></td>
+    </tr><tr data-cat="Organizational">
+      <td><span class="risk-id">R03</span></td>
+      <td style="max-width:280px">Change management across a shared frontline (AP, Master Data, Procurement, helpdesk) - overlapping adoption demands and distrust of AI outputs can stall realization.</td>
+      <td><span class="risk-cat organizational">Organizational</span></td>
+      <td><span class="chip medium">Medium</span></td>
+      <td><span class="chip medium">Medium</span></td>
+      <td style="max-width:280px;font-size:.75rem">Copilot-first rollout with visible confidence + easy override; cross-functional S2P AI governance body; adoption KPIs; phased pilots on the two highest-value SOPs before scaling.</td>
+      <td><div class="sops-inline"><span class="sop-tag">Vendor Helpdesk Operations</span> <span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></div></td>
+    </tr><tr data-cat="Technical">
+      <td><span class="risk-id">R04</span></td>
+      <td style="max-width:280px">Conditional fraud/anomaly agents depend on tooling not yet live (SisID/Oversight in Asia) and the shared Biarritz ML platform + Responsible AI approval; sequencing slippage delays the highest-severity fraud controls.</td>
+      <td><span class="risk-cat technical">Technical</span></td>
+      <td><span class="chip medium">Medium</span></td>
+      <td><span class="chip high">High</span></td>
+      <td style="max-width:280px;font-size:.75rem">Run interim rule-based sanctions/fraud screening + call-back verification until tools are live; sequence sanctions/anomaly/exception-analytics agents into Phase 3 after S08 ML platform and SisID/Oversight go-live; do not gate GO controls on them.</td>
+      <td><div class="sops-inline"><span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Travel &amp; Expense Claims Processing</span></div></td>
+    </tr><tr data-cat="Operational">
+      <td><span class="risk-id">R05</span></td>
+      <td style="max-width:280px">Shared master data / CRM quality issues (supplier master, coding, sanctions lists) feed multiple clusters; poor data undermines matching, screening and duplicate detection portfolio-wide.</td>
+      <td><span class="risk-cat operational">Operational</span></td>
+      <td><span class="chip medium">Medium</span></td>
+      <td><span class="chip medium">Medium</span></td>
+      <td style="max-width:280px;font-size:.75rem">Data-quality/cleansing workstream ahead of Phase 1; validate against active code lists; start rule-based and layer ML risk scoring as data matures; independent review of reconciliations.</td>
+      <td><div class="sops-inline"><span class="sop-tag">Travel &amp; Expense Claims Processing</span> <span class="sop-tag">Managing Supplier Payments</span> <span class="sop-tag">Invoice Processing</span></div></td>
+    </tr></tbody>
+      </table></div>
+  </div></div>
+  <div class="section" id="sec-recommendation"><div class="sec-pad">
+    <div class="sec-head">
+      <div class="sec-title">Strategic Recommendation</div>
+      <h2 class="sec-h">Strategic <strong>Recommendation</strong></h2>
+      <p class="sec-sub">Recommended implementation path with rationale, priority sequence and 90-day quick wins.</p>
+    </div>
+
+    <div class="rec-path-badge">
+      <div>
+        <div class="rp-path">Platform-First</div>
+        <div class="rp-sub">Recommended implementation path</div>
+      </div>
+    </div>
+
+    <div class="rec-block">
+      <div class="rb-head">Rationale</div>
+      <div class="rb-text">The 27 GO use cases across the four S2P SOPs deliver $2,951,828 in annual savings, and the top three clusters - Reconciliation &amp; Verification (C09), Compliance &amp; Regulatory (C05) and Knowledge Synthesis (C10) - together account for 18 of the 27 GO use cases (67%), well above the 50% Platform-First threshold. Because the same five agent patterns (status/inquiry copilot, matching/reconciliation, compliance screening, exception routing, document ingestion) recur across three or four SOPs each, building eight shared platform services once cuts implementation cost from $1,546,000 to $1,082,200 (30%) and blended payback from 6.3 to 4.4 months. A unified S2P agent platform under Chanel TECH governance is therefore clearly preferable to four independent SOP builds.</div>
+    </div>
+
+    <div class="rec-block">
+      <div class="rb-head">Priority Sequence</div>
+      <div class="seq-row"><div class="seq-chip"><span class="sc-id">C09 - Reconciliation &amp; Verification</span>
+      </div><div class="seq-chip"><span class="sc-id">C05 - Compliance &amp; Regulatory</span>
+      </div><div class="seq-chip"><span class="sc-id">C10 - Knowledge Synthesis</span>
+      </div><div class="seq-chip"><span class="sc-id">C08 - Exception Management</span>
+      </div><div class="seq-chip"><span class="sc-id">C07 - Document Processing</span>
+      </div></div>
+    </div>
+
+    <div class="rec-block">
+      <div class="rb-head">Quick Wins — First 90 Days</div>
+      <ul class="rec-list"><li><span class="ri">1.</span>Stand up the T&amp;E Compliance Audit Agent (100% coverage, $510K/yr, 2.8-month payback) as the flagship pilot on the Compliance &amp; Screening Service (S01).</li><li><span class="ri">2.</span>Deploy the Payment Policy Screening Agent (100% mandated screening, $369K/yr, 4.2-month payback) on the same S01 service for Supplier Payments.</li><li><span class="ri">3.</span>Launch the Vendor Helpdesk Status Retrieval + Response Drafting copilot ($182K/yr combined) as the first tenant of the Status &amp; Inquiry Copilot Service (S03).</li><li><span class="ri">4.</span>Ship the Bank-Detail Verification Orchestrator ($104K/yr plus BEC loss-avoidance) as an immediate fraud-control quick win.</li></ul>
+    </div>
+
+    <div class="rec-block">
+      <div class="rb-head">Key Success Factors</div>
+      <ul class="rec-list"><li><span class="ri">✓</span>Build the Data Integration &amp; API Gateway (S06) first, aligned to the HERO dual-ERP entity system matrix.</li><li><span class="ri">✓</span>Enforce human-in-loop and Responsible AI approval on all screening, matching and anomaly decisions.</li><li><span class="ri">✓</span>Consolidate to five canonical agents rather than 26 separate designs to capture the 30% efficiency.</li><li><span class="ri">✓</span>Pilot on the two highest-value SOPs (T&amp;E and Supplier Payments) before scaling.</li><li><span class="ri">✓</span>Run a data-quality workstream ahead of Phase 1 to protect matching and screening accuracy.</li></ul>
+    </div>
+
+    <div class="rec-block">
+      <div class="rb-head">Long-term Vision</div>
+      <div class="rb-text">A single governed S2P agent platform on Chanel TECH, Copilot Studio, ServiceNow, Fabric and Biarritz - eight shared services and five canonical agents serving all four SOPs - with humans retaining every payment, approval, master-data and tax decision, plus a preserved long-tail of SOP-specific automations.</div>
+    </div>
+
+    <div style="margin-top:2rem;padding:1rem;background:var(--l01);border:1px solid var(--bs);
+        font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.625rem;color:var(--tpl)">
+      Synthesis method: benchmark_based ·
+      Generated: 2026-09-03 ·
+      Financial model is benchmark-based: role-tier hourly rates (Ops $40, Analyst $57, Senior $77) applied to document-stated volumes where available (Vendor Helpdesk 21K inquiries, T&amp;E 97K claims, Invoice Processing 7.1K manual invoices) and to grounded estimates elsewhere (supplier-payment request volumes ~90K, inquiry splits). Savings sum only the 27 GO use cases; the 8 CONDITIONAL use cases (sanctions/fraud screening pending SisID/Oversight, payment-run + T&amp;E anomaly detection pending the Biarritz ML platform, multi-jurisdiction tax validation, non-PO routing and helpdesk analytics with sub-threshold standalone ROI) are excluded from totals and sequenced into Phase 3. Loss-avoidance value from fraud/sanctions/duplicate controls is noted qualitatively and not monetised, so the compliance and fraud clusters are conservatively valued. Consolidation applies the 30% benchmark efficiency to shared platform-service implementation.
+    </div>
+  </div></div>
+</div>
+<script>
+// ── nav ──────────────────────────────────────────────────────────────────────
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  const sec = document.getElementById('sec-' + id);
+  if (sec) sec.classList.add('active');
+  const btn = document.querySelector('.nav-btn[data-id="' + id + '"]');
+  if (btn) btn.classList.add('active');
+  const hash = '#' + id;
+  if (location.hash !== hash) history.replaceState(null,'',hash);
+  if (id === 'heatmap') drawHeatmap();
+  if (id === 'roadmap') drawRoadmapChart();
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const id = (location.hash || '#overview').replace('#','');
+  showSection(id);
+});
+
+// ── UC filter ─────────────────────────────────────────────────────────────────
+function filterUC() {
+  const query = (document.getElementById('uc-search') || {}).value || '';
+  const q = query.toLowerCase();
+  const decBtn = document.querySelector('#sec-portfolio .fchip.active[data-dec]');
+  const activeDec = decBtn ? decBtn.dataset.dec : 'all';
+  const sopBtn = document.querySelector('#sec-portfolio .fchip.active[data-sop]');
+  const activeSop = sopBtn ? sopBtn.dataset.sop : null;
+  let shown = 0;
+  document.querySelectorAll('.uc-card').forEach(card => {
+    const matchQ = !q || card.querySelector('.uc-name').textContent.toLowerCase().includes(q);
+    const matchD = activeDec === 'all' || card.dataset.dec === activeDec;
+    const matchS = !activeSop || card.dataset.sop === activeSop;
+    const visible = matchQ && matchD && matchS;
+    card.classList.toggle('hidden', !visible);
+    if (visible) shown++;
+  });
+  const cnt = document.getElementById('uc-count');
+  if (cnt) cnt.textContent = shown + ' use case' + (shown !== 1 ? 's' : '');
+}
+
+document.addEventListener('click', e => {
+  const fchip = e.target.closest('.fchip');
+  if (!fchip) return;
+  const parent = fchip.closest('.fchip-group');
+  if (!parent) return;
+  parent.querySelectorAll('.fchip').forEach(c => c.classList.remove('active'));
+  fchip.classList.add('active');
+  filterUC();
+});
+
+// ── UC card expand ────────────────────────────────────────────────────────────
+function toggleUC(card) {
+  card.classList.toggle('open');
+}
+
+// ── Risk filter ───────────────────────────────────────────────────────────────
+function filterRisk() {}
+document.addEventListener('click', e => {
+  const rb = e.target.closest('.fchip[data-cat]');
+  if (!rb) return;
+  const par = rb.closest('div');
+  if (par) par.querySelectorAll('.fchip').forEach(c => c.classList.remove('active'));
+  rb.classList.add('active');
+  const cat = rb.dataset.cat;
+  document.querySelectorAll('#risk-tbody tr').forEach(row => {
+    row.classList.toggle('hidden', cat !== 'all' && row.dataset.cat !== cat);
+  });
+});
+
+// ── D3 heatmap ────────────────────────────────────────────────────────────────
+function drawHeatmap() {
+  const data = {"rows":["C01","C02","C05","C06","C07","C08","C09","C10","C11"],"columns":["vendor-helpdesk","travel-expense-claims","manage-supplier-payments","invoice-processing"],"data":[[0,0,0,0],[1,0,0,0],[1,1,1,0],[1,1,0,0],[1,1,0,1],[1,0,2,1],[0,3,3,2],[2,1,1,1],[0,0,0,1]],"row_totals":[0,1,3,2,3,4,8,5,1],"col_totals":[7,7,7,6]};
+  if (!data || !data.rows || !data.columns || !data.data) return;
+  const svg = document.getElementById('hmap-svg');
+  if (!svg) return;
+  const rows = data.rows;
+  const cols = data.columns;
+  const matrix = data.data;
+  const rowTotals = data.row_totals || rows.map((_,i) => matrix[i] ? matrix[i].reduce((a,b)=>a+b,0) : 0);
+  const colTotals = data.col_totals || cols.map((_,j) => matrix.reduce((a,r)=>a+(r[j]||0),0));
+  const maxVal = Math.max(1, ...matrix.flat().filter(Number.isFinite));
+
+  const cellW = 70, cellH = 32, rowLblW = 80, totW = 40, totH = 30;
+  const padT = 50, padL = 10;
+  const W = padL + rowLblW + cols.length * cellW + totW + 20;
+  const H = padT + rows.length * cellH + totH + 10;
+
+  svg.setAttribute('width', W);
+  svg.setAttribute('height', H);
+  svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+
+  function hexToRgb(hex, a) {
+    const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    return 'rgba('+r+','+g+','+b+','+a+')';
+  }
+
+  let s = '';
+
+  // Column headers
+  cols.forEach((col, j) => {
+    const x = padL + rowLblW + j * cellW + cellW / 2;
+    s += '<text x="'+x+'" y="'+(padT-8)+'" text-anchor="middle" font-size="9" fill="#8a8072" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'
+      + col.replace(/-/g,'‑').substring(0,10) + '</text>';
+  });
+
+  // Row labels + cells
+  rows.forEach((row, i) => {
+    const y = padT + i * cellH;
+    s += '<text x="'+(padL+rowLblW-6)+'" y="'+(y+cellH/2+4)+'" text-anchor="end" font-size="9" fill="#8a8072" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'
+      + row + '</text>';
+    cols.forEach((col, j) => {
+      const v = (matrix[i] || [])[j] || 0;
+      const alpha = v === 0 ? 0 : 0.15 + 0.75 * (v / maxVal);
+      const fill  = v === 0 ? '#f7f4ee' : ('rgba(30,132,73,' + alpha.toFixed(2) + ')');
+      const x = padL + rowLblW + j * cellW;
+      s += '<rect x="'+(x+1)+'" y="'+(y+1)+'" width="'+(cellW-2)+'" height="'+(cellH-2)+'" rx="2" fill="'+fill+'" stroke="#efe9df" stroke-width="1"/>';
+      if (v > 0)
+        s += '<text x="'+(x+cellW/2)+'" y="'+(y+cellH/2+4)+'" text-anchor="middle" font-size="11" font-weight="700" fill="'+(alpha>0.6?'#1d1d1d':'#333333')+'" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'+v+'</text>';
+    });
+    // row total
+    const rx = padL + rowLblW + cols.length * cellW;
+    s += '<text x="'+(rx+totW/2)+'" y="'+(y+cellH/2+4)+'" text-anchor="middle" font-size="10" font-weight="700" fill="#b08d57" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'+(rowTotals[i]||0)+'</text>';
+  });
+
+  // Col totals
+  cols.forEach((col, j) => {
+    const x = padL + rowLblW + j * cellW;
+    const ty = padT + rows.length * cellH + totH / 2 + 4;
+    s += '<text x="'+(x+cellW/2)+'" y="'+ty+'" text-anchor="middle" font-size="10" font-weight="700" fill="#b08d57" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'+(colTotals[j]||0)+'</text>';
+  });
+
+  // Grid lines
+  for (let i = 0; i <= rows.length; i++) {
+    const y = padT + i * cellH;
+    s += '<line x1="'+(padL+rowLblW)+'" y1="'+y+'" x2="'+(padL+rowLblW+cols.length*cellW)+'" y2="'+y+'" stroke="#efe9df" stroke-width="1"/>';
+  }
+  for (let j = 0; j <= cols.length; j++) {
+    const x = padL + rowLblW + j * cellW;
+    s += '<line x1="'+x+'" y1="'+padT+'" x2="'+x+'" y2="'+(padT+rows.length*cellH)+'" stroke="#efe9df" stroke-width="1"/>';
+  }
+
+  // Labels "Row Totals" / "Col Totals"
+  const ty = padT + rows.length * cellH + totH / 2 + 4;
+  const rx = padL + rowLblW + cols.length * cellW;
+  s += '<text x="'+(rx+totW/2)+'" y="'+ty+'" text-anchor="middle" font-size="8" fill="#8a8072" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">Σ</text>';
+  s += '<text x="'+(padL+rowLblW-6)+'" y="'+ty+'" text-anchor="end" font-size="8" fill="#8a8072" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">Σ</text>';
+
+  svg.innerHTML = s;
+}
+
+// ── Roadmap savings chart ─────────────────────────────────────────────────────
+function drawRoadmapChart() {
+  const rollout = [{"phase":1,"name":"Foundation + Highest-Value Pilots","timeframe":"Months 0-6","deliverables":["Data Integration & API Gateway (S06)","Compliance & Screening Service (S01) with T&E audit + payment policy screening rule packs","Reconciliation & Matching Service (S02) with PO-match + duplicate detection","Status & Inquiry Copilot Service (S03) grounded status/response across Vendor Helpdesk","Bank-detail verification orchestrator (quick fraud win)"],"pilot_sops":["Travel & Expense Claims Processing","Managing Supplier Payments"],"services_in_phase":["S06","S01","S02","S03"],"cost":930300,"savings_realized_by_end":1600000,"critical_path":"S06 gateway + entity system matrix -> S01 screening (T&E 100% audit, payment 100% policy screening) -> S02 matching/duplicate -> S03 copilot on Vendor Helpdesk","dependencies":["Chanel TECH architecture/security approval","HERO dual-ERP entity matrix","Read access to D365/AX/Coupa/Concur"],"gating_decisions":["Responsible AI approval for screening/risk scoring","Confirm AX-vs-HERO source-of-truth per entity"]},{"phase":2,"name":"Expansion: Capture, Exceptions & Coding","timeframe":"Months 7-12","deliverables":["Document Ingestion & OCR Service (S04) - receipt + invoice OCR to lift touchless 49%->65%","Exception & Workflow Orchestration Service (S05) - EX-code + 14-category + escalation routing","Coding suggestion + supplier-master validation agents","Extend Status & Inquiry Copilot to Supplier Payments + Invoice Processing"],"pilot_sops":["Invoice Processing","Travel & Expense Claims Processing"],"services_in_phase":["S04","S05"],"cost":266000,"savings_realized_by_end":2600000,"critical_path":"AI-OCR selection (Chanel TECH) -> S04 ingestion -> S05 exception/workflow routing -> canonical copilot extension","dependencies":["AI-OCR procurement + Chanel TECH approval","S06 gateway live","ServiceNow Finance Operations capability"],"gating_decisions":["AI-OCR build-vs-buy","Supplier enablement plan for portal/e-invoicing"]},{"phase":3,"name":"Optimisation: ML Monitoring, Analytics & Conditional Agents","timeframe":"Months 13-18","deliverables":["Analytics, ML & Reporting Platform (S08) - Fabric dashboards + Biarritz ML-serving","Monitoring & Alerting Service (S07)","Sanctions/fraud screening + payment-run anomaly + T&E exception-analytics (conditional agents once SisID/Oversight + ML platform live)","Multi-jurisdiction tax-validation agent"],"pilot_sops":["Managing Supplier Payments","Invoice Processing"],"services_in_phase":["S08","S07"],"cost":102200,"savings_realized_by_end":2951828,"critical_path":"Fabric data foundation + Biarritz ML-serving -> S07 monitoring -> unblock CONDITIONAL sanctions/anomaly/tax agents","dependencies":["SisID/Oversight go-live in Asia","Biarritz ML platform provisioning","Responsible AI approval for ML models","Governed tax-rule engine"],"gating_decisions":["Responsible AI sign-off on ML fraud/anomaly models","Tax-rules build-vs-buy"]}];
+  const svg = document.getElementById('roadmap-svg');
+  if (!svg || !rollout || !rollout.length) return;
+  const W = svg.parentElement ? svg.parentElement.clientWidth - 40 : 600;
+  const H = 100;
+  svg.setAttribute('viewBox', '0 0 '+W+' '+H);
+  const maxV = Math.max(1, ...rollout.map(p => p.savings_realized_by_end || 0));
+  const bw = (W - 40) / rollout.length;
+  const colors = ['#1e8449','#a6720d','#5b4636'];
+  let s = '';
+  rollout.forEach((p, i) => {
+    const v  = p.savings_realized_by_end || 0;
+    const bh = Math.max(4, (v / maxV) * (H - 30));
+    const x  = 20 + i * bw + bw * 0.15;
+    const w  = bw * 0.7;
+    const y  = H - 20 - bh;
+    const col = colors[i % colors.length];
+    s += '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+bh+'" rx="2" fill="'+col+'" opacity=".85"/>';
+    if (v > 0) s += '<text x="'+(x+w/2)+'" y="'+(y-5)+'" text-anchor="middle" font-size="9" font-weight="700" fill="'+col+'" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'+
+      (v>=1e6 ? '$'+(v/1e6).toFixed(1)+'M' : v>=1e3 ? '$'+Math.round(v/1e3)+'K' : '$'+v) + '</text>';
+    const lbl = (p.name || 'Phase '+(i+1)).replace('Foundation + Pilot','Ph1').replace('Foundation','Ph1').replace('Expansion','Ph2').replace('Optimisation','Ph3').replace('Optimization','Ph3').substring(0,12);
+    s += '<text x="'+(x+w/2)+'" y="'+(H-6)+'" text-anchor="middle" font-size="9" fill="#8a8072" font-family="Helvetica Neue,Helvetica,Arial,sans-serif">'+lbl+'</text>';
+  });
+  svg.setAttribute('height', H);
+  svg.innerHTML = s;
+}
+
+window.addEventListener('resize', () => {
+  if (document.getElementById('sec-heatmap').classList.contains('active')) drawHeatmap();
+  if (document.getElementById('sec-roadmap').classList.contains('active')) drawRoadmapChart();
+});
+</script>
+</body>
+</html>

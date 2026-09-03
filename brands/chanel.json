@@ -1,0 +1,32 @@
+{
+  "_comment": "Chanel brand tokens for the eaef-multiprocedure-eater dashboard re-skin. Derived from chanel.com: white surfaces, near-black text (rgb(29,29,29) buttons/nav, rgb(51,51,51) body copy), no colored UI chrome except a single champagne-gold accent sampled from product photography. Status colors (go/conditional/no-go) are kept as a universal green/amber/red data-viz convention, deepened for AA contrast on a white background. To re-skin for a NEW CLIENT: copy this file, replace 'palette' hex values with the new brand's palette (surfaces, text, one or two accent colors), and re-run apply_brand.py -- no HTML/CSS editing needed.",
+  "client_name": "Chanel",
+  "palette": {
+    "bg": "#ffffff",
+    "l01": "#f7f4ee",
+    "l02": "#efe9df",
+    "l03": "#d9d0bf",
+    "lh": "#f1ece1",
+    "bs": "#e4ddd0",
+    "bst": "#cfc4b0",
+    "tp": "#1d1d1d",
+    "ts": "#333333",
+    "tpl": "#8a8072",
+    "blue": "#b08d57",
+    "teal": "#7a6142",
+    "purple": "#5b4636",
+    "green": "#1e8449",
+    "warn": "#a6720d",
+    "err": "#c22b35",
+    "cyan": "#b08d57",
+    "mag": "#96524a",
+    "hero_gradient": "linear-gradient(135deg,#ffffff 0%,#f6f0e3 55%,#ffffff 100%)",
+    "ink_on_accent": "#1d1d1d"
+  },
+  "font_sans": "'Helvetica Neue',Helvetica,Arial,sans-serif",
+  "font_mono": "'Helvetica Neue',Helvetica,Arial,sans-serif",
+  "font_link_html": "",
+  "text_replacements": {
+    "<div class=\"logo\">EAEF <span>/ Chanel</span></div>": "<div class=\"logo\">CHANEL <span>/ AI Portfolio</span></div>"
+  }
+}
