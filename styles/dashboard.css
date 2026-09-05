@@ -26,6 +26,10 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
   border-radius:2px;transition:all .12s}
 .nav-btn:hover{border-color:var(--bs);color:var(--tp)}
 .nav-btn.active{background:rgba(176,141,87,.12);border-color:rgba(176,141,87,.3);color:var(--blue)}
+.ibm-badge{display:flex;align-items:center;flex-shrink:0;white-space:nowrap;padding-left:.875rem;
+  margin-left:.125rem;border-left:1px solid var(--bs);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:.8125rem;font-weight:700;color:var(--tp);letter-spacing:.01em}
+.ibm-badge span{font-weight:600;color:var(--blue);margin-left:.3em}
 
 /* ── Main body ── */
 .main{margin-top:48px}
@@ -104,6 +108,80 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg
 .chip.neutral{color:var(--ts);border-color:var(--bs)}
 .chip.purple{color:var(--purple);border-color:rgba(91,70,54,.3);background:rgba(91,70,54,.08)}
 .chip.teal{color:var(--teal);border-color:rgba(122,97,66,.3);background:rgba(122,97,66,.08)}
+.chip.qwin{color:var(--green);border-color:rgba(30,132,73,.35);background:rgba(30,132,73,.1)}
+.chip.strat{color:var(--blue);border-color:rgba(176,141,87,.35);background:rgba(176,141,87,.1)}
+.chip.marg{color:var(--tpl);border-color:var(--bs);background:var(--l02)}
+.chip.defer{color:var(--tpl);border-color:var(--bs);background:transparent}
+.pri-badge{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.625rem;font-weight:700;
+  padding:.125rem .5rem;border-radius:2px;border:1px solid}
+.pri-badge.qwin{color:var(--green);border-color:rgba(30,132,73,.35);background:rgba(30,132,73,.1)}
+.pri-badge.strat{color:var(--blue);border-color:rgba(176,141,87,.35);background:rgba(176,141,87,.1)}
+.pri-badge.marg{color:var(--tpl);border-color:var(--bs);background:var(--l02)}
+.pri-badge.defer{color:var(--tpl);border-color:var(--bs);background:transparent}
+
+/* ── Chevron phase roadmap ── */
+.chev-row{display:flex;margin-top:1.5rem;flex-wrap:wrap;gap:.5rem 0}
+.chev{flex:1;min-width:220px;position:relative;background:var(--l01);border:1px solid var(--bs);
+  padding:1.125rem 1.5rem 1.125rem 2rem;margin-right:-1px}
+.chev-arrow{clip-path:polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%, 20px 50%)}
+.chev-row .chev:first-child{padding-left:1.5rem;clip-path:polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%)}
+.chev-row .chev:last-child{clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%, 20px 50%)}
+.chev-top{border-top:3px solid var(--blue)}
+.chev-num{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.625rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;color:var(--tpl);margin-bottom:.25rem;display:block}
+.chev-name{font-size:1rem;font-weight:700;color:var(--tp);margin-bottom:.125rem}
+.chev-time{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.6875rem;color:var(--tpl);margin-bottom:.625rem}
+.chev-impact{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1.375rem;font-weight:700;
+  color:var(--green);margin-bottom:.625rem}
+.chev-impact span{font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--tpl);display:block;margin-top:.125rem}
+.chev ul{margin:0;padding-left:1.125rem;font-size:.75rem;color:var(--ts);line-height:1.6}
+.chev ul li{margin-bottom:.375rem}
+@media(max-width:900px){
+  .chev-row{flex-direction:column}
+  .chev, .chev-row .chev:first-child, .chev-row .chev:last-child{clip-path:none;margin-right:0;margin-bottom:.5rem;
+    border-left:3px solid var(--blue);padding-left:1.375rem}
+}
+
+/* ── As-Is / To-Be swimlane ── */
+.swim-outer{overflow-x:auto;margin-top:1.5rem;padding-bottom:.75rem}
+.swim-row{display:flex;gap:.625rem;min-width:max-content}
+.swim-col{width:190px;flex-shrink:0;display:flex;flex-direction:column}
+.swim-hd{background:rgba(176,141,87,.12);border:1px solid rgba(176,141,87,.3);color:var(--blue);
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.6875rem;font-weight:700;
+  text-align:center;padding:.5rem .375rem;border-radius:2px;min-height:2.75rem;display:flex;
+  align-items:center;justify-content:center;line-height:1.3}
+.swim-card{border:1px solid var(--bs);padding:.625rem .625rem;margin-top:.5rem;font-size:.6875rem;
+  color:var(--ts);line-height:1.5;flex:1;background:var(--l01)}
+.swim-asis{border-top:3px solid var(--err)}
+.swim-tobe{border-top:3px solid var(--green)}
+.swim-lbl{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.5625rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;margin-bottom:.375rem;display:block}
+.swim-asis .swim-lbl{color:var(--err)}
+.swim-tobe .swim-lbl{color:var(--green)}
+.swim-arrow{text-align:center;color:var(--tpl);font-size:.875rem;margin:.375rem 0;flex-shrink:0}
+.swim-ctx{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem;margin-top:1.25rem}
+.swim-ctx-card{background:var(--l01);border:1px solid var(--bs);padding:.75rem 1rem;font-size:.75rem;
+  color:var(--ts);line-height:1.55}
+.swim-ctx-card .sc-lbl{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.5625rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;color:var(--tpl);margin-bottom:.375rem;display:block}
+.swim-callout{background:rgba(176,141,87,.08);border:1px solid rgba(176,141,87,.3);border-left:3px solid var(--blue);
+  padding:1rem 1.25rem;margin-top:1.25rem;font-size:.8125rem;color:var(--ts);line-height:1.65}
+.swim-callout strong{color:var(--tp)}
+
+/* ── Sub-process rollout cards (As-Is/To-Be deck Phase 1 / Phase 2) ── */
+.subproc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-top:1.25rem}
+.subproc-card{background:var(--l01);border:1px solid var(--bs);border-top:3px solid var(--teal);padding:1.125rem 1.25rem}
+.subproc-name{font-size:.9375rem;font-weight:700;color:var(--tp);margin-bottom:.625rem;display:flex;
+  align-items:center;justify-content:space-between;gap:.5rem}
+.subproc-name .sp-prod{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.75rem;font-weight:700;
+  color:var(--green);white-space:nowrap}
+.subproc-row{margin-bottom:.5rem;font-size:.75rem;line-height:1.55}
+.subproc-row .sr-lbl{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.5625rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.05em;color:var(--tpl);display:block;margin-bottom:.1875rem}
+.subproc-row .sr-v{color:var(--ts)}
+.subproc-outcome{margin-top:.625rem;padding-top:.625rem;border-top:1px dashed var(--bs);font-size:.75rem;
+  color:var(--green);line-height:1.5}
 
 /* ── Filter bar ── */
 .filter-bar{position:sticky;top:48px;z-index:80;background:var(--l01);
